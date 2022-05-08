@@ -1,0 +1,45 @@
+section{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #EAEAEA;
+    text-align: center;
+}
+.questionsContainer{
+    max-width: 750px;
+    margin: 0 auto;
+}
+h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.questionsBtns{
+    display: flex;
+    justify-content: space-between;
+    button{
+        width: 320px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+        border-radius: 58px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        transition: all linear .4s;
+         &:hover{
+           transform: scale(1.1);
+       }
+    }
+}
