@@ -19,11 +19,17 @@ const Navibar = () => {
 
 
     const[show, setShow] = useState(false);
+    const [isLogged, setIsLogged] = useState(false); 
 
     const handleShow = () => {
         setShow(true);
     }
      const handleClose = () => setShow(false); 
+     const logIn = () => {
+        handleClose();
+        setIsLogged(true);
+     } 
+     const logOut = () => setIsLogged(false);
 
 
     return(
@@ -50,7 +56,7 @@ const Navibar = () => {
                                   <Nav.Link><Link to="/reference">Вопросы</Link></Nav.Link>
                              </Nav>
                              <Nav className="my-2">
-                                    <Button variant="light" className="me-2" onClick={handleShow}>Войти</Button>
+                                 {isLogged ?  <Button variant= "dark" className="me-2" onClick={isLogged? logOut :handleShow}>{isLogged ? "Выйти" : "Войти"}</Button> :  <Button variant= "light" className="me-2" onClick={isLogged? logOut :handleShow}>{isLogged ? "Выйти" : "Войти"}</Button>}
                                     <Button variant="light" className="me-2"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button>
                              </Nav>
                         </Navbar.Collapse>
@@ -83,7 +89,7 @@ const Navibar = () => {
           <Button variant="secondary" onClick={handleClose}>
             Отмена
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={logIn}>
             Войти
           </Button>
         </Modal.Footer>
