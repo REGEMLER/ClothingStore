@@ -23,6 +23,8 @@ const Navibar = () => {
     const handleShow = () => {
         setShow(true);
     }
+     const handleClose = () => setShow(false); 
+
 
     return(
             <Styles>
@@ -54,6 +56,38 @@ const Navibar = () => {
                         </Navbar.Collapse>
                       </Container>
                 </Navbar>
+                <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+                <Modal.Title>Log IN</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Form>
+                    <Form.Group className="my-2" controlId="fromBasikEmail">
+                        <Form.Label>Email Adress</Form.Label>
+                        <Form.Control type="email" placeholder="Введите Ваш email"></Form.Control>
+                    </Form.Group>
+                    <Form.Group className="my-2" controlId="fromBasikLogin">
+                        <Form.Label>Логин</Form.Label>
+                        <Form.Control type="login" placeholder="Введите Ваш логин"></Form.Control>
+                    </Form.Group>
+                    <Form.Group className="my-2" controlId="fromBasikPassword">
+                        <Form.Label>Пароль</Form.Label>
+                        <Form.Control type="password" placeholder="Введите пароль"></Form.Control>
+                    </Form.Group>
+                    <Form.Group controlId="fromBasikCheckbox">
+                        <Form.Check type="checkbox" label="Запомнить меня"></Form.Check>
+                    </Form.Group>
+                </Form>
+            </Modal.Body>
+            <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Отмена
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Войти
+          </Button>
+        </Modal.Footer>
+        </Modal>
             </Styles>
     )
 }
