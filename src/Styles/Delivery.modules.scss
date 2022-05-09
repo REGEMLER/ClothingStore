@@ -107,11 +107,11 @@ h3{
 
 
 ////////////////////////////
-.card{
+.kard{
     text-align: center;
     .cardImg{
-        width: 370px;
-        height: 400px;
+        width: 330px;
+        height: 380px;
         background: #FFFFFF;
         box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
         border-radius: 36px;
@@ -121,12 +121,51 @@ h3{
             object-fit: cover;
         }
     }
+}
+
+
+.cardContent{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
     .cardTitle{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
         text-align: center;
         font-size: 26px;
-        margin: 10px 0;
+        margin: 5px auto;
     }
-}
+    .cardText{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Montserrat';
+         font-style: normal;
+         .cardTitle{
+            font-weight: 400;
+            font-size: 26px;
+         }
+         .cardPrice{
+            font-size: 30px;
+            font-weight: 500;
+         }
+    }
+    button{
+        width: 250px;
+        margin: 0 auto;
+        height: 57px;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+        border-radius: 36px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        text-align: center;
+        transition: all linear .4s;
+        &:hover{
+            transform: scale(1.1);
+        }
+     }
+    }

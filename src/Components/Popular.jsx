@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col} from "react-bootstrap";
-import cls from "../Styles/Delivery.modules.scss"
+import cls from "../Styles/Delivery.modules.scss";
 import bickl from "../IMG/bickl.png";
 import tShort from "../IMG/t-short.png";
 import mask from "../IMG/mask.png";

@@ -12,7 +12,9 @@ import Delivery from "./Pages/Delivery";
 import Payment from "./Pages/Payment";
 import Servis from "./Pages/Servis";
 import Catalog from "./Pages/Catalog";
+import Cart from "./Pages/Cart";
 import Reference from "./Pages/Reference";
+import ProductPage from "./Pages/ProductPage";
 import Navibar from './Components/Navibar';
 import Footer from './Components/Footer';
 
@@ -27,6 +29,8 @@ function App() {
       <Route path="/payment" element={<Payment/>}/>
       <Route path="/servis" element={<Servis/>}/>
       <Route path="/reference" element={<Reference/>}/>
+      <Route path="/cart" element={<Cart/>}/>
+      <Route path="/product1" element={<ProductPage/>}/>
     </Routes>
     <Footer/>
     </Router>

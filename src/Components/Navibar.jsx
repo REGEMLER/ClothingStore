@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {Navbar, Nav, Button, Container, Modal, Form} from  "react-bootstrap";
 import {Link} from  "react-router-dom";
 import styled from "styled-components";
-import {CartButton} from "./CartButton";
 import logo from "../IMG/logo.png";
+import cart from "../IMG/cart.png"
 
 const Styles = styled.div`
     a, .navbar-brand, .navbar-nav, .nav-link {
@@ -49,7 +49,7 @@ const Navibar = () => {
                              </Nav>
                              <Nav className="my-2">
                                     <Button variant="light" className="me-2" onClick={handleShow}>Войти</Button>
-                                    <CartButton/>
+                                    <Button variant="light" className="me-2"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button>
                              </Nav>
                         </Navbar.Collapse>
                       </Container>
