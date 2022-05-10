@@ -2,6 +2,7 @@ import React from "react";
 import {Subtitle} from "../Components/Subtitle";
 import {Examples} from "../Components/Examples";
 import {Questions} from "../Components/Questions"; 
+import {Popular} from "../Components/Popular"; 
 import {Requiz} from "../Components/Requiz"; 
 import {Col, Container, Row, Button} from  "react-bootstrap";
 
@@ -30,6 +31,7 @@ const Servis = () => {
                 </Row>
             </Container>
             <Examples/>
+            <Popular/>
             <Requiz/>
             <Questions/>
         </>
