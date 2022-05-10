@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/ClothingStore/static/css/main.649a0c44.css",
+    "main.js": "/ClothingStore/static/js/main.31a029c0.js",
+    "static/media/Slide1.jpg": "/ClothingStore/static/media/Slide1.bdff38434b7deb29b651.jpg",
+    "static/media/Slide3.jpg": "/ClothingStore/static/media/Slide3.0d9a714fa1b0f64a70cc.jpg",
+    "static/media/Slide2.jpg": "/ClothingStore/static/media/Slide2.b01a16f0d6f2fd0c2f63.jpg",
+    "static/media/Example3.png": "/ClothingStore/static/media/Example3.80de48166f8958fe88f5.png",
+    "static/media/Example2.png": "/ClothingStore/static/media/Example2.23ccc12b9a356d58dd13.png",
+    "static/media/map.png": "/ClothingStore/static/media/map.26beff15ecd3cd429e7e.png",
+    "static/media/Example1.png": "/ClothingStore/static/media/Example1.9435c045354563a6fff7.png",
+    "static/media/equip.png": "/ClothingStore/static/media/equip.27d179e52736b17b3d45.png",
+    "static/media/tols.png": "/ClothingStore/static/media/tols.520e6efc02955461cce4.png",
+    "static/media/mask.png": "/ClothingStore/static/media/mask.57312a4e58bae90f1358.png",
+    "static/media/legg.png": "/ClothingStore/static/media/legg.47534edc056d51e63c3b.png",
+    "static/media/invent.png": "/ClothingStore/static/media/invent.a0c9004b4c15334fea20.png",
+    "static/media/t-short.png": "/ClothingStore/static/media/t-short.02d6d139cdbd6341ba51.png",
+    "static/media/majka.png": "/ClothingStore/static/media/majka.8782acaa2c71d0fb5652.png",
+    "static/media/boots.png": "/ClothingStore/static/media/boots.02c4d92850eedbfd729e.png",
+    "static/media/shorts.png": "/ClothingStore/static/media/shorts.acd7f2fd72bdc7d9b3d7.png",
+    "static/media/bickl.png": "/ClothingStore/static/media/bickl.85b75713a934e8f6c7be.png",
+    "static/media/logo.png": "/ClothingStore/static/media/logo.81392b62a79762390fbb.png",
+    "static/media/Delivery.png": "/ClothingStore/static/media/Delivery.9725bf2aa330e06d4ecd.png",
+    "static/media/PostBelpng.png": "/ClothingStore/static/media/PostBelpng.d2dc7aebfc3aed0b9307.png",
+    "static/media/Visa.webp": "/ClothingStore/static/media/Visa.44dc9cf7735ef2580695.webp",
+    "static/media/slick.svg": "/ClothingStore/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ClothingStore/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ClothingStore/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/ClothingStore/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/ClothingStore/index.html",
+    "main.649a0c44.css.map": "/ClothingStore/static/css/main.649a0c44.css.map",
+    "main.31a029c0.js.map": "/ClothingStore/static/js/main.31a029c0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.649a0c44.css",
+    "static/js/main.31a029c0.js"
+  ]
+}
