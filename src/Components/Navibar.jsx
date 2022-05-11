@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Navbar, Nav, Button, Container, Modal, Form} from  "react-bootstrap";
-import {Link} from  "react-router-dom";
+import {Link, NavLink} from  "react-router-dom";
 import styled from "styled-components";
 import logo from "../IMG/logo.png";
 import cart from "../IMG/cart.png"
@@ -12,6 +12,9 @@ const Styles = styled.div`
         &:hover{
             color: white;
         }
+    .active{
+        color:white; 
+    }
     } 
 `
 
@@ -48,16 +51,17 @@ const Navibar = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                              <Nav className="me-auto my-2 my-lg-0">
-                                  <Nav.Link><Link to="/">Главная</Link></Nav.Link>
-                                  <Nav.Link><Link to="/catalog">Каталог</Link></Nav.Link>
-                                  <Nav.Link><Link to="/delivery">Доставка</Link></Nav.Link>
-                                  <Nav.Link><Link to="/payment">Оплата</Link></Nav.Link>
-                                  <Nav.Link><Link to="/servis">Услуги</Link></Nav.Link>
-                                  <Nav.Link><Link to="/reference">Вопросы</Link></Nav.Link>
+                                  <Nav.Link><NavLink activeClassName="active" to="/">Главная</NavLink></Nav.Link>
+                                  <Nav.Link><NavLink activeClassName="active" to="/catalog">Каталог</NavLink></Nav.Link>
+                                  <Nav.Link><NavLink activeClassName="active" to="/delivery">Доставка</NavLink></Nav.Link>
+                                  <Nav.Link><NavLink activeClassName="active" to="/payment">Оплата</NavLink></Nav.Link>
+                                  <Nav.Link><NavLink activeClassName="active" to="/servis">Услуги</NavLink></Nav.Link>
+                                  <Nav.Link><NavLink activeClassName="active" to="/reference">Вопросы</NavLink></Nav.Link>
                              </Nav>
                              <Nav className="my-2">
-                                 {isLogged ?  <Button variant= "dark" className="me-2" onClick={isLogged? logOut :handleShow}>{isLogged ? "Выйти" : "Войти"}</Button> :  <Button variant= "light" className="me-2" onClick={isLogged? logOut :handleShow}>{isLogged ? "Выйти" : "Войти"}</Button>}
-                                    <Button variant="light" className="me-2"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button>
+                                 {isLogged ?  <Button variant="light" className="me-3"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3"><img src={cart}/>Корзина</Button>}
+                                 {isLogged ?  <Button variant="light" className="me-3"><Link style={{"color": "black"}} to="/constructor">Создай свой дизайн</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3">Создай свой дизайн</Button>}
+                                 {isLogged ?  <Button variant= "light" className="me-3" onClick={logOut}>Выйти</Button>:<Button variant= "outline-light" className="me-3" onClick={handleShow}>Войти</Button>}
                              </Nav>
                         </Navbar.Collapse>
                       </Container>

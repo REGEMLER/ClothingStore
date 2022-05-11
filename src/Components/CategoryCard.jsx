@@ -15,7 +15,7 @@ const Styles = styled.div`
     } 
 `
 
-export const CategoryCard = ({id,image,title,text,lin}) => {
+export const CategoryCard = ({id,image,title,text}) => {
 
     return(<Styles>
         <Card key={id} style={{ width: '18rem', minHeight: "400px" }}>

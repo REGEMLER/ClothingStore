@@ -1,9 +1,10 @@
 import React from "react";
 import cls from "../Styles/Delivery.modules.scss"
 
-export const Card =({id,image,title,size,price}) =>{
+export const Card =({id,image,title,size,price,addProduct}) =>{
 
-   
+
+   // функция addProduct не принимается и не работает 
     return(
         <div key={id} className="kard">
             <div className="cardImg"><img src={image}/></div>
@@ -17,7 +18,7 @@ export const Card =({id,image,title,size,price}) =>{
                     <p className="cardTitle">Цена:</p>
                     <p className="cardPrice">{price} ₽</p>
                 </div>
-                <button>В корзину</button>
+                <button onClick={()=>addProduct(id,image,title,size,price)}>В корзину</button>
             </div>
         </div>
 

@@ -34,15 +34,15 @@ const Styles = styled.div`
 const Catalog = () => {
 
     const categoryCards = [
-        {id: "category1",image: tShort , title: "Верх", text: "Футболки, майки", lin:"/product1"},
-        {id: "category2",image: bickl , title: "Низ", text: "Велосипедки, леггинсы",lin:"/product1"},
-        {id: "category3",image: boots , title: "Обувь", text: "Штангетки",lin: "/product1"},
-        {id: "category4",image: legg , title: "Леггинсы", text: "Для путешествий",lin: "/product1"},
-        {id: "category5",image: equip , title: "Экипировка", text: "Ремни для гиревого спорта и тяжелоатлетические",lin: "/product1"},
-        {id: "category6",image: mask , title: "Маски", text: "Медицинские с готовым и индивидуальным дизайном",link: "/product1"},
-        {id: "category7",image: majka , title: "Майки", text: "Удобство, комфорт, свобода",lin: "/product1"},
-        {id: "category8",image: shorts , title: "Шорты", text: "Всех размеров", lin: "/product1"},
-        {id: "category9",image: tols , title: "Рашгарды", text: "Стильно, модно, молодежно",lin: "/product1"},
+        {id: "category1",image: tShort , title: "Верх", text: "Футболки, майки"},
+        {id: "category2",image: bickl , title: "Низ", text: "Велосипедки, леггинсы"},
+        {id: "category3",image: boots , title: "Обувь", text: "Штангетки"},
+        {id: "category4",image: legg , title: "Леггинсы", text: "Для путешествий"},
+        {id: "category5",image: equip , title: "Экипировка", text: "Ремни для гиревого спорта и тяжелоатлетические"},
+        {id: "category6",image: mask , title: "Маски", text: "Медицинские с готовым и индивидуальным дизайном"},
+        {id: "category7",image: majka , title: "Майки", text: "Удобство, комфорт, свобода"},
+        {id: "category8",image: shorts , title: "Шорты", text: "Всех размеров"},
+        {id: "category9",image: tols , title: "Рашгарды", text: "Стильно, модно, молодежно"},
     ];
 
     return(
@@ -57,7 +57,6 @@ const Catalog = () => {
              image={clothesItem.image}
              title={clothesItem.title}
              text={clothesItem.text}
-             lin={clothesItem.lin}
              />
             })}
         </div>

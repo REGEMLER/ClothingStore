@@ -7,7 +7,7 @@ export const Requiz = () => {
     return(
         <>
         <Container className="w-100 my-4 text-center">
-            <h3>Ревизиты</h3>
+            <h3>Реквизиты</h3>
             <Row className="d-flex justify-content-center align-items-center">
                 <Col><ul>
                     <li>ООО «Clothes-Team»</li>

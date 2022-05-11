@@ -15,6 +15,7 @@ import Catalog from "./Pages/Catalog";
 import Cart from "./Pages/Cart";
 import Reference from "./Pages/Reference";
 import ProductPage from "./Pages/ProductPage";
+import Constructor from "./Pages/Constructor";
 import Navibar from './Components/Navibar';
 import Footer from './Components/Footer';
 
@@ -31,6 +32,7 @@ function App() {
       <Route path="/reference" element={<Reference/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/product1" element={<ProductPage/>}/>
+      <Route path="/constructor" element={<Constructor/>}/>
     </Routes>
     <Footer/>
     </Router>
