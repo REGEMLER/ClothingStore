@@ -7,12 +7,18 @@ const Styles = styled.div`
     div {
         background: #EAEAEA;
         padding:20px;
+        @media screen and (max-width: 768px){
+            padding: 5px;
+        }
     } 
     h2{
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
         font-size: 60px;
+        @media screen and (max-width: 768px){
+            font-size: 48px;
+        }
     }
 `
 

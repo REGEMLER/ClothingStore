@@ -28,6 +28,12 @@ const Styles = styled.div`
         grid-gap: 40px;
         align-content: stretch;
         justify-content: space-around;
+        @media screen and (max-width: 768px){
+            padding: 10px;
+            grid-gap: 20px;
+            justify-content: center;
+            align-content: center;
+        }
     } 
 `
 

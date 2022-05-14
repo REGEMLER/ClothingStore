@@ -25,12 +25,12 @@ export const  Examples = () => {
         <Container className="text-center my-5">
             <h2 style={{"textAlign": "left"}}>Примеры наших работ:</h2>
             <Slider {...settings}>
-                <div className="popularImg"><img src={example1}/></div>
-                <div className="popularImg"><img src={example2}/></div>
-                <div className="popularImg"><img src={example3}/></div>
-                <div className="popularImg"><img src={example1}/></div>
-                <div className="popularImg"><img src={example2}/></div>
-                <div className="popularImg"><img src={example3}/></div>
+                <div className="exampleImg"><img src={example1}/></div>
+                <div className="exampleImg"><img src={example2}/></div>
+                <div className="exampleImg"><img src={example3}/></div>
+                <div className="exampleImg"><img src={example1}/></div>
+                <div className="exampleImg"><img src={example2}/></div>
+                <div className="exampleImg"><img src={example3}/></div>
             </Slider>
         </Container>
         </>

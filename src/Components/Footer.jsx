@@ -18,6 +18,9 @@ const Styles = styled.div`
         &:hover{
             color: black;
         }
+        @media screen and (max-width: 576px){
+            font-size: 16px;
+        }
     } 
 `
 

@@ -16,22 +16,25 @@ const Styles = styled.div`
         font-style: normal;
         font-weight: 500;
         font-size: 64px;
+        @media screen and (max-width: 768px){
+            font-size: 48px;
+        }
     } 
 `
 
  export const ShopWindow = () => {
     return(
-        <Container className="my-5 md-text-center">
+        <Container className="my-5 text-center text-md-start">
             <Styles><h2>Что вы ищите?</h2></Styles>
             <Row className="my-3">
-                <Col><CategoryCard image={tShort} title="Верх" text="Футболки, майки"/></Col>
-                <Col><CategoryCard image={bickl} title="Низ" text="Велосипедки, леггинсы"/></Col>
-                <Col><CategoryCard image={boots} title="Обувь" text="Штангетки"/></Col>
+                <Col className="my-2 my-sm- d-flex justify-content-center"><CategoryCard image={tShort} title="Верх" text="Футболки, майки"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={invent} title="Инвентарь" text="Магнезия для гиревого спорта"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={boots} title="Обувь" text="Штангетки"/></Col>
             </Row>
             <Row className="my-3">
-                <Col><CategoryCard image={invent} title="Инвентарь" text="Магнезия для гиревого спорта"/></Col>
-                <Col><CategoryCard image={equip} title="Экипировка" text="Ремни для гиревого спорта и тяжелоатлетические"/></Col>
-                <Col><CategoryCard image={mask} title="Маски" text="Медицинские с готовым и индивидуальным дизайном"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={bickl} title="Низ" text="Велосипедки, леггинсы"/></Col>    
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={equip} title="Экипировка" text="Ремни тяжелоатлетические"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={mask} title="Маски" text="Медицинские с готовым и индивидуальным дизайном"/></Col>
             </Row>
         </Container>
     )

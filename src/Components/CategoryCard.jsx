@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Link} from  "react-router-dom";
 const Styles = styled.div`
     .card {
+        margin: 0 auto;
         transition: all linear .4s;
         &:hover{
             transform: scale(1.05);
@@ -18,7 +19,7 @@ const Styles = styled.div`
 export const CategoryCard = ({id,image,title,text}) => {
 
     return(<Styles>
-        <Card key={id} style={{ width: '18rem', minHeight: "400px" }}>
+        <Card key={id} style={{ width: '18rem', minHeight: "400px", maxHeight: "470px" }}>
         <Link className="categoryLink" to="/product1">
         <Card.Img variant="top" src={image}/>
               <Card.Body>

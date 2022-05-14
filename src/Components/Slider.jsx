@@ -7,19 +7,25 @@ import slide3 from "../IMG/Slide3.jpg";
 import styled from "styled-components";
 
 const Styles = styled.div`
-    a,h3, p {
+    a,h1, p {
         font-family: 'Montserrat';
         font-style: normal;
     } 
-    h3{
+    h1{
         color: #000;
         font-weight: 500;
         font-size: 88px;
+        @media screen and (max-width: 768px){
+            font-size: 48px;
+        }
     }
     p{
         color: #fff;
         font-weight: 400;
         font-size: 44px;
+        @media screen and (max-width: 768px){
+            font-size: 26px;
+        }
     }
     a{
         text-decoration: none;
@@ -45,7 +51,7 @@ const Styles = styled.div`
                     style={{"height": "600px"}}
                      />
                         <Carousel.Caption>
-                            <h3>3=2</h3>
+                            <h1>3=2</h1>
                             <p>Закажи три футболки, а заплати только за две.</p>
                             <Button variant="light" className="me-2"><Link to="/catalog">Перейти в каталог</Link></Button>
                         </Carousel.Caption>
@@ -58,7 +64,7 @@ const Styles = styled.div`
                     style={{"height": "600px"}}
                      />
                         <Carousel.Caption>
-                            <h3>Моя жизнь. Мой путь.</h3>
+                            <h1>Моя жизнь. Мой путь.</h1>
                             <p>Обувь такая комфортная, что всё вокруг кажется незаметным.</p>
                             <Button variant="light" className="me-2"><Link to="/catalog">Перейти в каталог</Link></Button>
                         </Carousel.Caption>
@@ -71,7 +77,7 @@ const Styles = styled.div`
                     style={{"height": "600px"}}
                      />
                         <Carousel.Caption>
-                            <h3>Одежды всегда не хватает</h3>
+                            <h1>Одежды всегда не хватает</h1>
                             <p>Для самых элегантных и утонченных. Для самого требовательного стиля.</p>
                             <Button variant="light" className="me-2"><Link to="/catalog">Перейти в каталог</Link></Button>
                         </Carousel.Caption>

@@ -3,6 +3,9 @@ section{
     margin: 0 auto;
     padding: 40px;
     background-color: #EAEAEA;
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
 }
 
 ul{
@@ -14,6 +17,9 @@ ul{
         font-weight: 400;
         font-size: 26px;
         margin-bottom: 10px;
+        @media screen and (max-width: 768px){
+            font-size: 20px;
+        }
     }
 }
 
@@ -23,6 +29,9 @@ p{
     font-weight: 400;
     font-size: 26px;
     margin-bottom: 10px;
+    @media screen and (max-width: 768px){
+        font-size: 20px;
+    }
 }
 
 h3, h2{
@@ -31,6 +40,9 @@ h3, h2{
     font-weight: 500;
     font-size: 60px;
     text-transform: uppercase;
+    @media screen and (max-width: 768px){
+        font-size: 48px;
+    }
 }
 
 h2{
@@ -53,13 +65,33 @@ h3{
         object-fit: contain;
         text-align: center;
     }
+    @media screen and (max-width: 768px){
+        width: 150px;
+        height: 150px;
+    }
 }
 
 
 ///////////////////////////////////////////////////////
+.exampleImg{
+    min-height: 400px;
+    background-color: #fff;
+    @media screen and (max-width: 768px){
+        min-height: 200px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 .popularImg{
     min-height: 450px;
     background-color: #fff;
+    @media screen and (max-width: 768px){
+        min-height: 400px;
+    }
     img{
         width: 100%;
         height: 100%;
@@ -82,6 +114,9 @@ h3{
          .popularPrice{
             font-size: 30px;
             font-weight: 500;
+            @media screen and (max-width: 768px){
+                font-size: 26px;
+            }
          }
     }
     button{
@@ -99,6 +134,11 @@ h3{
         transition: all linear .4s;
         &:hover{
             transform: scale(1.1);
+        }
+        @media screen and (max-width: 768px){
+            width: 210px;
+            height: 40px;
+            font-size: 22px;
         }
      }
     }

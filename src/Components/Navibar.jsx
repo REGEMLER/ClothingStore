@@ -38,7 +38,7 @@ const Navibar = () => {
     return(
             <Styles>
                 <Navbar expand="md" collapseOnSelect bg="dark" variant="dark">
-                    <Container className="sm-text-center">
+                    <Container className="sm-text-center justify-content-sm-center">
                     <Navbar.Brand href="/">
                         <img
                              src={logo}
@@ -51,17 +51,17 @@ const Navibar = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                              <Nav className="me-auto my-2 my-lg-0">
-                                  <Nav.Link><NavLink activeClassName="active" to="/">Главная</NavLink></Nav.Link>
-                                  <Nav.Link><NavLink activeClassName="active" to="/catalog">Каталог</NavLink></Nav.Link>
-                                  <Nav.Link><NavLink activeClassName="active" to="/delivery">Доставка</NavLink></Nav.Link>
-                                  <Nav.Link><NavLink activeClassName="active" to="/payment">Оплата</NavLink></Nav.Link>
-                                  <Nav.Link><NavLink activeClassName="active" to="/servis">Услуги</NavLink></Nav.Link>
-                                  <Nav.Link><NavLink activeClassName="active" to="/reference">Вопросы</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/">Главная</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/catalog">Каталог</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/delivery">Доставка</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/payment">Оплата</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/servis">Услуги</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/reference">Вопросы</NavLink></Nav.Link>
                              </Nav>
                              <Nav className="my-2">
-                                 {isLogged ?  <Button variant="light" className="me-3"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3"><img src={cart}/>Корзина</Button>}
-                                 {isLogged ?  <Button variant="light" className="me-3"><Link style={{"color": "black"}} to="/constructor">Создай свой дизайн</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3">Создай свой дизайн</Button>}
-                                 {isLogged ?  <Button variant= "light" className="me-3" onClick={logOut}>Выйти</Button>:<Button variant= "outline-light" className="me-3" onClick={handleShow}>Войти</Button>}
+                                 {isLogged ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3 my-2 my-md-0"><img src={cart}/>Корзина</Button>}
+                                 {isLogged ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/constructor">Создай свой дизайн</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3 my-2 my-md-0">Создай свой дизайн</Button>}
+                                 {isLogged ?  <Button variant= "light" className="me-2 my-2 my-md-0" onClick={logOut}>Выйти</Button>:<Button variant= "outline-light" className="me-2 my-2 my-md-0" onClick={handleShow}>Войти</Button>}
                              </Nav>
                         </Navbar.Collapse>
                       </Container>

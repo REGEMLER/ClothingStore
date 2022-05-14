@@ -4,24 +4,33 @@ section{
     padding: 50px;
     background-color: #EAEAEA;
     text-align: center;
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
 }
 .questionsContainer{
     max-width: 750px;
     margin: 0 auto;
-}
-h2{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 60px;
-    margin-bottom: 10px;
-}
-
-p{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
+    h2{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        margin-bottom: 10px;
+        @media screen and (max-width: 768px){
+            font-size: 48px;
+        }
+    }
+    
+    p{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        @media screen and (max-width: 768px){
+            font-size: 20px;
+        }
+    }
 }
 
 .questionsBtns{
@@ -41,5 +50,10 @@ p{
          &:hover{
            transform: scale(1.1);
        }
+       @media screen and (max-width: 768px){
+        width: 210px;
+        height: 40px;
+        font-size: 22px;
+    }
     }
 }
