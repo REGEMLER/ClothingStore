@@ -15,8 +15,8 @@ const Delivery = () => {
         <Subtitle title='Доставка'/>
         <Container className="p-5">
             <Row className="align-items-center">
-            <Col xs={4}><div className="deliveryImg"><img src={post2}/></div></Col>
-                <Col xs={8}>
+            <Col xs={5}><div className="deliveryImg"><img src={post2}/></div></Col>
+                <Col xs={7}>
                     <h3>Почта России</h3>
                     <ul>
                         <li>Сроки доставки: от 5 рабочих дней.</li>
@@ -27,8 +27,8 @@ const Delivery = () => {
                 </Col>
             </Row>
             <Row className="align-items-center">
-            <Col xs={4}><div className="deliveryImg"><img src={post1}/></div></Col>
-                <Col xs={8}>
+            <Col xs={5}><div className="deliveryImg"><img src={post1}/></div></Col>
+                <Col xs={7}>
                     <h3>Белпошта</h3>
                     <ul>
                         <li>Сроки доставки: 1-5 рабочих дней.</li>
@@ -39,8 +39,8 @@ const Delivery = () => {
                 </Col>
             </Row>
             <Row className="align-items-center">
-            <Col xs={4}><div className="deliveryImg"><img src={post2}/></div></Col>
-                <Col xs={8}>
+            <Col xs={5}><div className="deliveryImg"><img src={post2}/></div></Col>
+                <Col xs={7}>
                     <h3>СДЭК САМОВЫВОЗ</h3>
                     <ul>
                         <li>Сроки доставки: 1-5 рабочих дней.</li>
