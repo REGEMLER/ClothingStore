@@ -16,10 +16,10 @@ const Styles = styled.div`
     } 
 `
 
-export const CategoryCard = ({id,image,title,text}) => {
+export const CategoryCard = ({id,image,title,text,showCard,clothesItem}) => {
 
     return(<Styles>
-        <Card key={id} style={{ width: '18rem', minHeight: "400px", maxHeight: "470px" }}>
+        <Card onClick={()=>{showCard(clothesItem.id)}} key={id} style={{ width: '18rem', minHeight: "400px", maxHeight: "470px" }}>
         <Link className="categoryLink" to="/product1">
         <Card.Img variant="top" src={image}/>
               <Card.Body>

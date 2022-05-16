@@ -1,10 +1,23 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setItemInCart, deleteItemFromCart } from "../redux/cart/reducer";
 import cls from "../Styles/Delivery.modules.scss"
 
-export const Card =({id,image,title,size,price,addProduct}) =>{
+export const Card =({product,id,image,title,size,price}) =>{
+    const dispatch = useDispatch();
+    const items = useSelector((state) => state.cart.itemsInCart);
+    const isItemInCart = items.some((item) => item.id === product.id);
 
 
-   // функция addProduct не принимается и не работает 
+    const addInCart = (e) => {
+        e.stopPropagation();
+        if (isItemInCart) {
+            dispatch(deleteItemFromCart(product.id));
+         } else {
+             dispatch(setItemInCart(product));
+        }
+    }
+
     return(
         <div key={id} className="kard">
             <div className="cardImg"><img src={image}/></div>
@@ -18,7 +31,7 @@ export const Card =({id,image,title,size,price,addProduct}) =>{
                     <p className="cardTitle">Цена:</p>
                     <p className="cardPrice">{price} ₽</p>
                 </div>
-                <button onClick={()=>addProduct(id,image,title,size,price)}>В корзину</button>
+                <button onClick={addInCart}>{isItemInCart ? "Удалить" : "В Корзину"}</button>
             </div>
         </div>
 

@@ -6,7 +6,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import { Provider } from 'react-redux';
+import { store } from './redux';
 import Home from "./Pages/Home";
 import Delivery from "./Pages/Delivery";
 import Payment from "./Pages/Payment";
@@ -21,6 +22,7 @@ import Footer from './Components/Footer';
 
 function App() {
   return (<>
+  <Provider store={store}>
       <Router>
     <Navibar/>
     <Routes>
@@ -36,6 +38,7 @@ function App() {
     </Routes>
     <Footer/>
     </Router>
+  </Provider>
   </>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {Subtitle} from "../Components/Subtitle";
 import {Popular} from "../Components/Popular"; 
 import {Questions} from "../Components/Questions"; 
@@ -39,30 +39,35 @@ const Styles = styled.div`
 
 const Catalog = () => {
 
-    const categoryCards = [
-        {id: "category1",image: tShort , title: "Верх", text: "Футболки, майки"},
-        {id: "category2",image: bickl , title: "Низ", text: "Велосипедки, леггинсы"},
-        {id: "category3",image: boots , title: "Обувь", text: "Штангетки"},
-        {id: "category4",image: legg , title: "Леггинсы", text: "Для путешествий"},
-        {id: "category5",image: equip , title: "Экипировка", text: "Ремни для гиревого спорта и тяжелоатлетические"},
-        {id: "category6",image: mask , title: "Маски", text: "Медицинские с готовым и индивидуальным дизайном"},
-        {id: "category7",image: majka , title: "Майки", text: "Удобство, комфорт, свобода"},
-        {id: "category8",image: shorts , title: "Шорты", text: "Всех размеров"},
-        {id: "category9",image: tols , title: "Рашгарды", text: "Стильно, модно, молодежно"},
-    ];
+     const [categories, setCategories] = useState([
+        {id: "category1",image: tShort , title: "Верх", text: "Футболки, майки", show:false},
+        {id: "category2",image: bickl , title: "Низ", text: "Велосипедки, леггинсы", show:false},
+        {id: "category3",image: boots , title: "Обувь", text: "Штангетки", show:false},
+        {id: "category4",image: legg , title: "Леггинсы", text: "Для путешествий", show:false},
+        {id: "category5",image: equip , title: "Экипировка", text: "Ремни для гиревого спорта и тяжелоатлетические", show:false},
+        {id: "category6",image: mask , title: "Маски", text: "Медицинские с готовым и индивидуальным дизайном", show:false},
+        {id: "category7",image: majka , title: "Майки", text: "Удобство, комфорт, свобода", show:false},
+        {id: "category8",image: shorts , title: "Шорты", text: "Всех размеров", show:false},
+        {id: "category9",image: tols , title: "Рашгарды", text: "Стильно, модно, молодежно", show:false},
+    ]);
+
+    const showCard = (id) => {
+        setCategories([...categories.map(card=> card.id === id ? {...card, show: !card.show} : {...card})])
+    }
 
     return(
         <>
         <Subtitle title='Выберите категорию'/>
         <Styles>
         <div className="catalog">
-              {categoryCards.map ((clothesItem) => {
+              {categories.map ((clothesItem) => {
              return <CategoryCard
              key={clothesItem.id}
              clothesItem={clothesItem}
              image={clothesItem.image}
              title={clothesItem.title}
              text={clothesItem.text}
+             showCard={showCard}
              />
             })}
         </div>
