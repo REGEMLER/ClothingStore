@@ -1,5 +1,5 @@
 import React from "react";
-import {CategoryCard} from "./CategoryCard"; 
+import {ShopWindowCard} from "./ShopWindowCard"; 
 import tShort from "../IMG/t-short.png";
 import bickl from "../IMG/bickl.png";
 import boots from "../IMG/boots.png";
@@ -25,16 +25,16 @@ const Styles = styled.div`
  export const ShopWindow = () => {
     return(
         <Container className="my-5 text-center text-md-start">
-            <Styles><h2>Что вы ищите?</h2></Styles>
+            <Styles><h2>Богатый выбор</h2></Styles>
             <Row className="my-3">
-                <Col className="my-2 my-sm- d-flex justify-content-center"><CategoryCard image={tShort} title="Верх" text="Футболки, майки"/></Col>
-                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={invent} title="Инвентарь" text="Магнезия для гиревого спорта"/></Col>
-                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={boots} title="Обувь" text="Штангетки"/></Col>
+                <Col className="my-2 my-sm- d-flex justify-content-center"><ShopWindowCard image={tShort} title="Верх" text="Футболки, майки"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><ShopWindowCard image={invent} title="Инвентарь" text="Магнезия для гиревого спорта"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><ShopWindowCard image={boots} title="Обувь" text="Штангетки"/></Col>
             </Row>
             <Row className="my-3">
-                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={bickl} title="Низ" text="Велосипедки, леггинсы"/></Col>    
-                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={equip} title="Экипировка" text="Ремни тяжелоатлетические"/></Col>
-                <Col className="my-2 my-sm-0 d-flex justify-content-center"><CategoryCard image={mask} title="Маски" text="Медицинские с готовым и индивидуальным дизайном"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><ShopWindowCard image={bickl} title="Низ" text="Велосипедки, леггинсы"/></Col>    
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><ShopWindowCard image={equip} title="Экипировка" text="Ремни тяжелоатлетические"/></Col>
+                <Col className="my-2 my-sm-0 d-flex justify-content-center"><ShopWindowCard image={mask} title="Маски" text="Медицинские с готовым и индивидуальным дизайном"/></Col>
             </Row>
         </Container>
     )

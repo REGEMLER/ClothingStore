@@ -1,7 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import {Card} from  "react-bootstrap";
 import styled from "styled-components";
 import {Link} from  "react-router-dom";
+import { setCurrentCard } from "../redux/card/reducer";
 const Styles = styled.div`
     .card {
         margin: 0 auto;
@@ -16,11 +18,16 @@ const Styles = styled.div`
     } 
 `
 
-export const CategoryCard = ({id,image,title,text,showCard,clothesItem}) => {
+export const CategoryCard = ({id,image,title,text,clothesItem}) => {
+
+    const dispatch = useDispatch(); 
+    const handleClick = () => {
+        dispatch(setCurrentCard(clothesItem));
+    }
 
     return(<Styles>
-        <Card onClick={()=>{showCard(clothesItem.id)}} key={id} style={{ width: '18rem', minHeight: "400px", maxHeight: "470px" }}>
-        <Link className="categoryLink" to="/product1">
+        <Card onClick={handleClick} key={id} style={{ width: '18rem', minHeight: "400px", maxHeight: "470px" }}>
+        <Link className="categoryLink" to="/product">
         <Card.Img variant="top" src={image}/>
               <Card.Body>
                  <Card.Title>{title}</Card.Title>

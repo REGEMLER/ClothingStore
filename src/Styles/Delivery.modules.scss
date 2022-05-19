@@ -132,6 +132,14 @@ h3{
         font-size: 36px;
         text-align: center;
         transition: all linear .4s;
+        a{
+            text-decoration: none;
+            color: #ccc;
+            transition: all linear .2s;
+            &:hover{
+                color:black
+            }
+        }
         &:hover{
             transform: scale(1.1);
         }
