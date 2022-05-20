@@ -57,6 +57,7 @@ const Navibar = () => {
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/payment">Оплата</NavLink></Nav.Link>
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/servis">Услуги</NavLink></Nav.Link>
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/reference">Вопросы</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/comments">Отзывы</NavLink></Nav.Link>
                              </Nav>
                              <Nav className="my-2">
                                  {isLogged ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3 my-2 my-md-0"><img src={cart}/>Корзина</Button>}

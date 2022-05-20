@@ -2,7 +2,7 @@ import React from "react";
 import {Subtitle} from "../Components/Subtitle";
 import {Questions} from "../Components/Questions"; 
 import {Col, Container, Row} from  "react-bootstrap";
-import cls from "../Styles/Delivery.modules.scss";
+import cls from "../Styles/Styles.modules.scss";
 import post1 from "../IMG/PostBelpng.png";
 import post2 from "../IMG/Delivery.png";
 
@@ -13,11 +13,11 @@ const Delivery = () => {
     return(
         <>
         <Subtitle title='Доставка'/>
-        <Container className="p-5">
-            <Row className="align-items-center">
+        <Container className="p-4">
+            <Row >
             <Col xs={5}><div className="deliveryImg"><img src={post2}/></div></Col>
                 <Col xs={7}>
-                    <h3>Почта России</h3>
+                    <h3 className="deliveryTitle">Почта России</h3>
                     <ul>
                         <li>Сроки доставки: от 5 рабочих дней.</li>
                         <li>Пересылка до востребования.</li>
@@ -26,10 +26,10 @@ const Delivery = () => {
                     </ul>
                 </Col>
             </Row>
-            <Row className="align-items-center">
+            <Row>
             <Col xs={5}><div className="deliveryImg"><img src={post1}/></div></Col>
                 <Col xs={7}>
-                    <h3>Белпошта</h3>
+                    <h3 className="deliveryTitle">Белпошта</h3>
                     <ul>
                         <li>Сроки доставки: 1-5 рабочих дней.</li>
                         <li>Пересылка до востребования.</li>
@@ -38,10 +38,10 @@ const Delivery = () => {
                     </ul>
                 </Col>
             </Row>
-            <Row className="align-items-center">
+            <Row>
             <Col xs={5}><div className="deliveryImg"><img src={post2}/></div></Col>
                 <Col xs={7}>
-                    <h3>СДЭК САМОВЫВОЗ</h3>
+                    <h3 className="deliveryTitle">СДЭК САМОВЫВОЗ</h3>
                     <ul>
                         <li>Сроки доставки: 1-5 рабочих дней.</li>
                         <li>Пересылка до востребования.</li>

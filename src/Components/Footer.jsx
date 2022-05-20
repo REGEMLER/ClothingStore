@@ -38,7 +38,7 @@ const Footer = () => {
                 <Col><Link to="/catalog">Каталог</Link></Col>
                 <Col><Link to="/">Главная</Link></Col>
                 <Col><Link to="/reference">Вопросы</Link></Col>
-                <Col><p>gergergrg@gmail.com</p></Col>
+                <Col><p>georgeus@gmail.com</p></Col>
             </Row>
             <Row>
                 <Col><Link to="/delivery">Доставка</Link></Col>

@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import { Provider } from 'react-redux';
 import { store } from './redux';
@@ -17,6 +16,7 @@ import Cart from "./Pages/Cart";
 import Reference from "./Pages/Reference";
 import ProductPage from "./Pages/ProductPage";
 import Constructor from "./Pages/Constructor";
+import Comments from "./Pages/Comments";
 import Navibar from './Components/Navibar';
 import Footer from './Components/Footer';
 
@@ -32,6 +32,7 @@ function App() {
       <Route path="/payment" element={<Payment/>}/>
       <Route path="/servis" element={<Servis/>}/>
       <Route path="/reference" element={<Reference/>}/>
+      <Route path="/comments" element={<Comments/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/product" element={<ProductPage/>}/>
       <Route path="/constructor" element={<Constructor/>}/>

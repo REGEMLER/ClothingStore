@@ -1,7 +1,7 @@
 import React from "react";
 import {Col} from "react-bootstrap";
 import {Link} from  "react-router-dom";
-import cls from "../Styles/Delivery.modules.scss";
+import cls from "../Styles/Styles.modules.scss";
 
 export const PopularItem = ({id,img,name,price}) => {
     return(

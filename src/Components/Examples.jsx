@@ -3,7 +3,7 @@ import {Container} from  "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cls from "../Styles/Delivery.modules.scss"
+import cls from "../Styles/Styles.modules.scss";
 import example1 from "../IMG/Example1.png";
 import example2 from "../IMG/Example2.png";
 import example3 from "../IMG/Example3.png";

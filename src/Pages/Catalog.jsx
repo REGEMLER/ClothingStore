@@ -1,6 +1,5 @@
-import React,{useState} from "react";
+import React from "react";
 import {Subtitle} from "../Components/Subtitle";
-import {Popular} from "../Components/Popular"; 
 import {Questions} from "../Components/Questions"; 
 import {Examples} from "../Components/Examples"; 
 import {CategoryCard} from "../Components/CategoryCard"; 
@@ -39,36 +38,38 @@ const Styles = styled.div`
 
 const Catalog = () => {
 
-     const [categories, setCategories] = useState([
-        {id: "category1",image: tShort , title: "Верх", text: "Футболки, майки"},
-        {id: "category2",image: bickl , title: "Низ", text: "Велосипедки, леггинсы"},
-        {id: "category3",image: boots , title: "Обувь", text: "Штангетки"},
-        {id: "category4",image: legg , title: "Леггинсы", text: "Для путешествий"},
-        {id: "category5",image: equip , title: "Экипировка", text: "Ремни для гиревого спорта и тяжелоатлетические"},
-        {id: "category6",image: mask , title: "Маски", text: "Медицинские с готовым и индивидуальным дизайном"},
-        {id: "category7",image: majka , title: "Майки", text: "Удобство, комфорт, свобода"},
-        {id: "category8",image: shorts , title: "Шорты", text: "Всех размеров"},
-        {id: "category9",image: tols , title: "Рашгарды", text: "Стильно, модно, молодежно"},
-    ]);
+     const categories = [
+        {id: "category1",image: tShort , title: "Верх", text: "Футболки, майки" , size: "40-50", titleInItem: "Футболка белая"},
+        {id: "category2",image: bickl , title: "Низ", text: "Велосипедки, леггинсы" , size: "60-70", titleInItem: "Трико"},
+        {id: "category3",image: boots , title: "Обувь", text: "Штангетки" , size: "38-45", titleInItem: "Кроссовки"},
+        {id: "category4",image: legg , title: "Леггинсы", text: "Для путешествий" , size: "XL", titleInItem: "Леггинсы"},
+        {id: "category5",image: equip , title: "Экипировка", text: "Ремни для гиревого спорта и тяжелоатлетические" , size: "XXL", titleInItem: "Ремень"},
+        {id: "category6",image: mask , title: "Маски", text: "Медицинские с готовым и индивидуальным дизайном" , size: "-", titleInItem: "Маска"},
+        {id: "category7",image: majka , title: "Майки", text: "Удобство, комфорт, свобода" , size: "40-60", titleInItem: ""},
+        {id: "category8",image: shorts , title: "Шорты", text: "Всех размеров" , size: "38-54", titleInItem: "Шорты"},
+        {id: "category9",image: tols , title: "Рашгарды", text: "Стильно, модно, молодежно" , size: "35-65", titleInItem: "Толстовка"},
+     ]
 
     return(
         <>
-        <Subtitle title='Выберите категорию'/>
-        <Styles>
-        <div className="catalog">
-              {categories.map ((clothesItem) => {
-             return <CategoryCard
-             key={clothesItem.id}
-             clothesItem={clothesItem}
-             image={clothesItem.image}
-             title={clothesItem.title}
-             text={clothesItem.text}
-             />
+            <Subtitle title='Выберите категорию'/>
+            <Styles>
+            <div className="catalog">
+                {categories.map ((clothesItem) => {
+                    return <CategoryCard
+                     key={clothesItem.id}
+                    clothesItem={clothesItem}
+                    image={clothesItem.image}
+                    title={clothesItem.title}
+                    text={clothesItem.text}
+                    size={clothesItem.size}
+                    titleInItem={clothesItem.titleInItem}
+                />
             })}
-        </div>
-        </Styles>
-        <Examples/>
-        <Questions/>
+            </div>
+            </Styles>
+            <Examples/>
+            <Questions/>
         </>
     )
 }

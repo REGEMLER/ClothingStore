@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setItemInCart, deleteItemFromCart } from "../redux/cart/reducer";
-import cls from "../Styles/Delivery.modules.scss"
+import cls from "../Styles/Styles.modules.scss"
 
 export const Card =({product,id,image,title,size,price}) =>{
     const dispatch = useDispatch();

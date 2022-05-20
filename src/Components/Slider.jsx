@@ -42,7 +42,7 @@ const Styles = styled.div`
   };
     return (
         <Styles>
-        <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel activeIndex={index} onSelect={handleSelect}>
                   <Carousel.Item>
                      <img
                     className="d-block w-100"
@@ -51,7 +51,7 @@ const Styles = styled.div`
                     style={{"height": "600px"}}
                      />
                         <Carousel.Caption>
-                            <h1>3=2</h1>
+                            <h1>Три по цене двух</h1>
                             <p>Закажи три футболки, а заплати только за две.</p>
                             <Button variant="light" className="me-2"><Link to="/catalog">Перейти в каталог</Link></Button>
                         </Carousel.Caption>
@@ -82,8 +82,7 @@ const Styles = styled.div`
                             <Button variant="light" className="me-2"><Link to="/catalog">Перейти в каталог</Link></Button>
                         </Carousel.Caption>
                     </Carousel.Item>
-        </Carousel>
+            </Carousel>
         </Styles>
-
     )
 }

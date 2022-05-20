@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row} from "react-bootstrap";
-import cls from "../Styles/Delivery.modules.scss";
+import cls from "../Styles/Styles.modules.scss";
 import {PopularItem} from "../Components/PopularItem";
 import bickl from "../IMG/bickl.png";
 import tShort from "../IMG/t-short.png";

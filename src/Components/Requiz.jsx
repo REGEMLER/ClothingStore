@@ -1,7 +1,7 @@
 import React from "react";
 import {Col, Container, Row} from  "react-bootstrap";
 import map  from "../IMG/map.png";
-import cls from "../Styles/Delivery.modules.scss";
+import cls from "../Styles/Styles.modules.scss";
 
 export const Requiz = () => {
     return(
