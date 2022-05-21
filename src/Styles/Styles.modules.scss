@@ -286,3 +286,109 @@ h3, h2{
     }
     }
 }
+
+//For comments 
+.comment-container{
+    width: 90%;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+    border-radius: 36px;
+    @media screen and (max-width: 768px){
+        padding: 10px;
+    }
+}
+.comment-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .comment-avatar{
+        width: 200px;
+        height: 200px;
+        background: #C4C4C4;
+        border-radius: 50%;
+        margin-right: 20px;
+        img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            object-fit: contain;
+            text-align: center;
+        }
+    }
+    .comment-content{
+        width: 80%;
+        .comment-name{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+        }
+        .comment-email{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+        }
+        .comment-text{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 26px;
+        }
+    }
+}
+
+.message{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #EAEAEA;
+    .message-container{
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px 100px;
+    }
+    @media screen and (max-width: 768px){
+        max-width: 500px;
+        padding: 20px;
+    }
+    .message-title{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 60px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 768px){
+            font-size: 48px;
+        }
+    }
+    .message-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        text-align: center;
+    }
+    .message-btn{
+        width: 380px;
+        height: 80px;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+        border-radius: 58px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        transition: all linear .4s;
+         &:hover{
+           transform: scale(1.1);
+       }
+       @media screen and (max-width: 768px){
+        width: 240px;
+        height: 40px;
+        font-size: 22px;
+        }
+    }
+}
