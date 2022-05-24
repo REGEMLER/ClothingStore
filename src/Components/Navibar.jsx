@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Navbar, Nav, Button, Container, Modal, Form} from  "react-bootstrap";
 import {Link, NavLink} from  "react-router-dom";
+import Login from "../Components/Login"; 
 import styled from "styled-components";
 import logo from "../IMG/logo.png";
 import cart from "../IMG/cart.png"
@@ -20,14 +21,14 @@ const Styles = styled.div`
 
 const Navibar = () => {
 
-
+    
     const[show, setShow] = useState(false);
+    const handleShow = () =>  setShow(true);
+    const handleClose = () => setShow(false); 
+
+
     const [isLogged, setIsLogged] = useState(false); 
 
-    const handleShow = () => {
-        setShow(true);
-    }
-     const handleClose = () => setShow(false); 
      const logIn = () => {
         handleClose();
         setIsLogged(true);
@@ -67,7 +68,8 @@ const Navibar = () => {
                         </Navbar.Collapse>
                       </Container>
                 </Navbar>
-                <Modal show={show} onHide={handleClose}>
+                {show ? <Login handleClose={logIn}/> : null }
+                {/* <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Log IN</Modal.Title>
             </Modal.Header>
@@ -98,7 +100,7 @@ const Navibar = () => {
             Войти
           </Button>
         </Modal.Footer>
-        </Modal>
+        </Modal> */}
             </Styles>
     )
 }
