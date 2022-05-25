@@ -12,6 +12,7 @@ import majka from "../IMG/majka.png";
 import shorts from "../IMG/shorts.png";
 
  export const Popular =() => {
+   
 
     const examplesArr = [{id: new Date(), image: bickl, name: "Шорты черные", price: "500"},
                       {id: new Date(), image: tShort, name: "Футболка мужская", price: "700"},

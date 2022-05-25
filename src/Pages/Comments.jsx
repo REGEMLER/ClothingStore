@@ -1,11 +1,13 @@
 import React,{useEffect, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
+import { useAuth } from "../hooks/useAuth";
 import { fetchComments } from "../redux/comments/ActionCreator";
 import {Subtitle} from "../Components/Subtitle";
 import {Comment} from "../Components/Comment";
 import {Message} from "../Components/Message";
 
 const  Comments = () => {
+    const {email,id,login} = useAuth(); 
     const comments = useSelector((state) => state.comments.comments);
     const isLoading = useSelector((state) => state.comments.isLoading);
     const error = useSelector((state) => state.comments.error);
@@ -13,7 +15,7 @@ const  Comments = () => {
 
     const [userComments, setUserComments] = useState([]); 
     const addComment = (userInput) => {
-        const comment = {id: new Date(), name: "Guest", body: userInput, email: "example@.com"};
+        const comment = {id, name: login, body: userInput, email};
         setUserComments([...userComments,comment]);
         console.log(userComments)
     }

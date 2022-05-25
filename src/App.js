@@ -17,6 +17,7 @@ import Reference from "./Pages/Reference";
 import ProductPage from "./Pages/ProductPage";
 import Constructor from "./Pages/Constructor";
 import Register from "./Pages/Register";
+import Login from "./Pages/Login";
 import Comments from "./Pages/Comments";
 import Navibar from './Components/Navibar';
 import Footer from './Components/Footer';
@@ -37,6 +38,7 @@ function App() {
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/product" element={<ProductPage/>}/>
       <Route path="/constructor" element={<Constructor/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
     </Routes>
     <Footer/>

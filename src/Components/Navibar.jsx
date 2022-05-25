@@ -1,7 +1,10 @@
-import React, {useState} from "react";
-import {Navbar, Nav, Button, Container, Modal, Form} from  "react-bootstrap";
+import React  from "react";
+import { useAuth } from "../hooks/useAuth";
+import { useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
+import {deleteUser} from "../redux/user/reducer";
+import {Navbar, Nav, Button, Container} from  "react-bootstrap";
 import {Link, NavLink} from  "react-router-dom";
-import Login from "../Components/Login"; 
 import styled from "styled-components";
 import logo from "../IMG/logo.png";
 import cart from "../IMG/cart.png"
@@ -21,20 +24,13 @@ const Styles = styled.div`
 
 const Navibar = () => {
 
-    
-    const[show, setShow] = useState(false);
-    const handleShow = () =>  setShow(true);
-    const handleClose = () => setShow(false); 
-
-
-    const [isLogged, setIsLogged] = useState(false); 
-
-     const logIn = () => {
-        handleClose();
-        setIsLogged(true);
-     } 
-     const logOut = () => setIsLogged(false);
-
+    const {isAuth} = useAuth(); 
+    const dispatch = useDispatch(); 
+    const navigate = useNavigate();
+    const logOut = () => {
+        dispatch(deleteUser());
+        navigate('/');
+    }
 
     return(
             <Styles>
@@ -53,7 +49,7 @@ const Navibar = () => {
                         <Navbar.Collapse id="responsive-navbar-nav">
                              <Nav className="me-auto my-2 my-lg-0">
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/">Главная</NavLink></Nav.Link>
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/catalog">Каталог</NavLink></Nav.Link>
+                                  {isAuth ?  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/catalog">Каталог</NavLink></Nav.Link> :  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/login">Каталог</NavLink></Nav.Link>}
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/delivery">Доставка</NavLink></Nav.Link>
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/payment">Оплата</NavLink></Nav.Link>
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/servis">Услуги</NavLink></Nav.Link>
@@ -61,46 +57,13 @@ const Navibar = () => {
                                   <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/comments">Отзывы</NavLink></Nav.Link>
                              </Nav>
                              <Nav className="my-2">
-                                 {isLogged ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3 my-2 my-md-0"><img src={cart}/>Корзина</Button>}
-                                 {isLogged ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/constructor">Создай свой дизайн</Link></Button> : <Button onClick={handleShow} variant="outline-light" className="me-3 my-2 my-md-0">Создай свой дизайн</Button>}
-                                 {isLogged ?  <Button variant= "light" className="me-2 my-2 my-md-0" onClick={logOut}>Выйти</Button>:<Button variant= "outline-light" className="me-2 my-2 my-md-0" onClick={handleShow}>Войти</Button>}
+                                 {isAuth ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={()=> navigate('/login')} variant="outline-light" className="me-3 my-2 my-md-0"><img src={cart}/>Корзина</Button>}
+                                 {isAuth ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/constructor">Создай свой дизайн</Link></Button> : <Button onClick={()=> navigate('/login')} variant="outline-light" className="me-3 my-2 my-md-0">Создай свой дизайн</Button>}
+                                 {isAuth ?  <Button variant="light" className="me-2 my-2 my-md-0" onClick={logOut}>Выйти</Button>:<Button variant= "outline-light" className="me-2 my-2 my-md-0" onClick={()=> navigate('/login')}>Войти</Button>}
                              </Nav>
                         </Navbar.Collapse>
                       </Container>
                 </Navbar>
-                {show ? <Login handleClose={logIn}/> : null }
-                {/* <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title>Log IN</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Form>
-                    <Form.Group className="my-2" controlId="fromBasikEmail">
-                        <Form.Label>Email Adress</Form.Label>
-                        <Form.Control type="email" placeholder="Введите Ваш email"></Form.Control>
-                    </Form.Group>
-                    <Form.Group className="my-2" controlId="fromBasikLogin">
-                        <Form.Label>Логин</Form.Label>
-                        <Form.Control type="login" placeholder="Введите Ваш логин"></Form.Control>
-                    </Form.Group>
-                    <Form.Group className="my-2" controlId="fromBasikPassword">
-                        <Form.Label>Пароль</Form.Label>
-                        <Form.Control type="password" placeholder="Введите пароль"></Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId="fromBasikCheckbox">
-                        <Form.Check type="checkbox" label="Запомнить меня"></Form.Check>
-                    </Form.Group>
-                </Form>
-            </Modal.Body>
-            <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Отмена
-          </Button>
-          <Button variant="primary" onClick={logIn}>
-            Войти
-          </Button>
-        </Modal.Footer>
-        </Modal> */}
             </Styles>
     )
 }
