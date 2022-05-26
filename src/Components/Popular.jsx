@@ -14,14 +14,14 @@ import shorts from "../IMG/shorts.png";
  export const Popular =() => {
    
 
-    const examplesArr = [{id: new Date(), image: bickl, name: "Шорты черные", price: "500"},
-                      {id: new Date(), image: tShort, name: "Футболка мужская", price: "700"},
-                      {id: new Date(), image: mask, name: "Маска для лица", price: "100"},
-                      {id: new Date(), image: boots, name: "Обувь", price: "400"},
-                      {id: new Date(), image: equip, name: "Ремень кожанный", price: "1500"},
-                      {id: new Date(), image: legg, name: "Леггинсы", price: "860"},
-                      {id: new Date(), image: majka, name: "майка белая", price: "200"},
-                      {id: new Date(), image: shorts, name: "Шорты", price: "300"}
+    const examplesArr = [{id: "ex1", image: bickl, name: "Шорты черные", price: "500"},
+                      {id: "ex2", image: tShort, name: "Футболка мужская", price: "700"},
+                      {id: "ex3", image: mask, name: "Маска для лица", price: "100"},
+                      {id: "ex4", image: boots, name: "Обувь", price: "400"},
+                      {id: "ex5", image: equip, name: "Ремень кожанный", price: "1500"},
+                      {id: "ex6", image: legg, name: "Леггинсы", price: "860"},
+                      {id: "ex7", image: majka, name: "майка белая", price: "200"},
+                      {id: "ex8", image: shorts, name: "Шорты", price: "300"}
         ];
     let arrSorted =  examplesArr.sort(()=> Math.random()-0.5);
     let arrDisplay = arrSorted.slice(0,3); 

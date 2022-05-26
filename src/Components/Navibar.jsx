@@ -48,13 +48,13 @@ const Navibar = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                              <Nav className="me-auto my-2 my-lg-0">
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/">Главная</NavLink></Nav.Link>
-                                  {isAuth ?  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/catalog">Каталог</NavLink></Nav.Link> :  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/login">Каталог</NavLink></Nav.Link>}
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/delivery">Доставка</NavLink></Nav.Link>
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/payment">Оплата</NavLink></Nav.Link>
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/servis">Услуги</NavLink></Nav.Link>
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/reference">Вопросы</NavLink></Nav.Link>
-                                  <Nav.Link className="text-md-start text-center"><NavLink activeClassName="active" to="/comments">Отзывы</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/">Главная</NavLink></Nav.Link>
+                                  {isAuth ?  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/catalog">Каталог</NavLink></Nav.Link> :  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/login">Каталог</NavLink></Nav.Link>}
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/delivery">Доставка</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/payment">Оплата</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/servis">Услуги</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/reference">Вопросы</NavLink></Nav.Link>
+                                  <Nav.Link className="text-md-start text-center"><NavLink activeclassname="active" to="/comments">Отзывы</NavLink></Nav.Link>
                              </Nav>
                              <Nav className="my-2">
                                  {isAuth ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={()=> navigate('/login')} variant="outline-light" className="me-3 my-2 my-md-0"><img src={cart}/>Корзина</Button>}

@@ -11,7 +11,7 @@ const Servis = () => {
     return(
         <>
             <Subtitle title='Услуги'/>
-            <Container className="w-100 my-4 text-center">
+            <Container className="w-100 my-4 text-center deliveryContainer">
                 <h2>Мы оказываем полный спектр услуг от проектирования до пошива одежды</h2>
                 <Row>
                     <Col className="my-2"><Button variant="outline-secondary" size="lg">Конструирование одежды</Button></Col>

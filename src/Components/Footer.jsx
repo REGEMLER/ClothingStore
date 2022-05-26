@@ -27,7 +27,7 @@ const Styles = styled.div`
 const Footer = () => {
     return (
         <Styles>
-        <Container>
+        <Container className="p-2">
             <Row>
                 <Col><Link to="/">Главная</Link></Col>
                 <Col><Link to="/delivery">Доставка</Link></Col>

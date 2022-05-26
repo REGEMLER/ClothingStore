@@ -26,7 +26,7 @@ const  Comments = () => {
     return(
         <>
             <Subtitle title="Отзывы"/>
-            {isLoading && <h2>Идет загрузка</h2>}
+            {isLoading && <h2>Идет загрузка...</h2>}
             {error && <h2>{error}</h2>}
             {comments.map(comment => {
                 return(

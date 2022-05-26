@@ -13,7 +13,7 @@ const Delivery = () => {
     return(
         <>
         <Subtitle title='Доставка'/>
-        <Container className="p-4">
+        <Container className="p-4 deliveryContainer">
             <Row >
             <Col xs={5}><div className="deliveryImg"><img src={post2}/></div></Col>
                 <Col xs={7}>

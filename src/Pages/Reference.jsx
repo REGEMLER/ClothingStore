@@ -14,7 +14,7 @@ const Reference = () => {
     return(
         <>  <Styles>
             <Subtitle title='Вопросы'/>
-            <Container className="w-100 my-4">
+            <Container className="w-100 my-4 deliveryContainer">
                 <Row className="w-100 my-2">
                     <h2>Оформление заказа</h2>
                     <Accordion defaultActiveKey="0">
