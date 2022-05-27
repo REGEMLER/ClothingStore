@@ -1,5 +1,5 @@
 import React from "react";
-import {Subtitle} from "../Components/Subtitle";
+import Subtitle from "../Components/Subtitle";
 import {Questions} from "../Components/Questions"; 
 import {Examples} from "../Components/Examples"; 
 import {CategoryCard} from "../Components/CategoryCard"; 

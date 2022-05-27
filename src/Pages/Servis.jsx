@@ -1,5 +1,5 @@
 import React from "react";
-import {Subtitle} from "../Components/Subtitle";
+import Subtitle from "../Components/Subtitle";
 import {Examples} from "../Components/Examples";
 import {Questions} from "../Components/Questions"; 
 import {Popular} from "../Components/Popular"; 

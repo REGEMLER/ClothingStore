@@ -1,10 +1,10 @@
-import React,{useEffect, useState} from "react";
+import React,{useEffect, useState, useCallback} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { useAuth } from "../hooks/useAuth";
 import { fetchComments } from "../redux/comments/ActionCreator";
-import {Subtitle} from "../Components/Subtitle";
+import Subtitle from "../Components/Subtitle";
 import {Comment} from "../Components/Comment";
-import {Message} from "../Components/Message";
+import Message from "../Components/Message";
 
 const  Comments = () => {
     const {email,id,login} = useAuth(); 
@@ -14,11 +14,11 @@ const  Comments = () => {
     const dispatch = useDispatch();
 
     const [userComments, setUserComments] = useState([]); 
-    const addComment = (userInput) => {
+    const newComment = (userInput) => {
         const comment = {id, name: login, body: userInput, email};
         setUserComments([...userComments,comment]);
-        console.log(userComments)
     }
+    const addComment = useCallback(newComment);
 
     useEffect(()=>{
         dispatch(fetchComments());

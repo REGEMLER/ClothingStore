@@ -3,7 +3,7 @@ import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from 'react-router-dom';
 import {Modal, Form, FormGroup, Button} from  "react-bootstrap";
 
-export const Message = ({addComment}) => {
+const Message = ({addComment}) => {
     const {isAuth} = useAuth(); 
     const navigate = useNavigate();
     const [userInput,setUserInput] = useState(``); 
@@ -56,3 +56,4 @@ export const Message = ({addComment}) => {
         </section>
     )
 }
+export default React.memo(Message); 

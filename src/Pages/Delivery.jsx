@@ -1,5 +1,5 @@
 import React from "react";
-import {Subtitle} from "../Components/Subtitle";
+import Subtitle from "../Components/Subtitle";
 import {Questions} from "../Components/Questions"; 
 import {Col, Container, Row} from  "react-bootstrap";
 import cls from "../Styles/Styles.modules.scss";

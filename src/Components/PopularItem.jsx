@@ -4,7 +4,7 @@ import {Col} from "react-bootstrap";
 import {Link} from  "react-router-dom";
 import cls from "../Styles/Styles.modules.scss";
 
-export const PopularItem = ({id,img,name,price}) => {
+const PopularItem = ({id,img,name,price}) => {
     const {isAuth} = useAuth(); 
     return(
         <Col key={id}>
@@ -19,3 +19,4 @@ export const PopularItem = ({id,img,name,price}) => {
         </Col>
     )
 }
+export default React.memo(PopularItem)

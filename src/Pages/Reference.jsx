@@ -1,5 +1,5 @@
 import React from "react";
-import {Subtitle} from "../Components/Subtitle";
+import Subtitle from "../Components/Subtitle";
 import {Container, Row, Accordion} from  "react-bootstrap";
 import {Questions} from "../Components/Questions"; 
 import styled from "styled-components";
@@ -70,8 +70,7 @@ const Reference = () => {
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
                             <Accordion.Header>Какие есть рекомендации по уходу?</Accordion.Header>
-                            <Accordion.Body>Правильный уход за текстильными изделиями и бережное обращение способствуют увеличению срока эксплуатации продукции.
-В России действует маркировка ухода за текстильными изделиями, которая узаконена в документе ГОСТ 16958-71. Настоящий стандарт устанавливает условные графические обозначения и их значение для ухода за текстильными изделиями.</Accordion.Body>
+                            <Accordion.Body>Правильный уход за текстильными изделиями и бережное обращение способствуют увеличению срока эксплуатации продукции.В России действует маркировка ухода за текстильными изделиями, которая узаконена в документе ГОСТ 16958-71. Настоящий стандарт устанавливает условные графические обозначения и их значение для ухода за текстильными изделиями.</Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
                             <Accordion.Header>Можно ли стирать одежду?</Accordion.Header>

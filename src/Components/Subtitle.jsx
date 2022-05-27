@@ -22,8 +22,9 @@ const Styles = styled.div`
     }
 `
 
-export const Subtitle = ({title}) => {
+ const Subtitle = ({title}) => {
     return (
         <Styles><div><Container><h2>{title}</h2></Container></div></Styles>
     )
 }
+export default React.memo(Subtitle);
