@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row} from "react-bootstrap";
-import cls from "../Styles/Styles.modules.scss";
+import cls from "../Styles/Popular.module.scss";
 import PopularItem from "../Components/PopularItem";
 import bickl from "../IMG/bickl.png";
 import tShort from "../IMG/t-short.png";
@@ -20,7 +20,7 @@ import shorts from "../IMG/shorts.png";
                       {id: "ex4", image: boots, name: "Обувь", price: "400"},
                       {id: "ex5", image: equip, name: "Ремень кожанный", price: "1500"},
                       {id: "ex6", image: legg, name: "Леггинсы", price: "860"},
-                      {id: "ex7", image: majka, name: "майка белая", price: "200"},
+                      {id: "ex7", image: majka, name: "Майка белая", price: "200"},
                       {id: "ex8", image: shorts, name: "Шорты", price: "300"}
         ];
     let arrSorted =  examplesArr.sort(()=> Math.random()-0.5);
@@ -28,9 +28,9 @@ import shorts from "../IMG/shorts.png";
 
 
     return(
-        <section>
+        <section className={cls.popular}>
             <Container fluid="md">
-                <h2>Популярные товары</h2>
+                <h2 className={cls.title}>Популярные товары</h2>
                 <Row>
                 {arrDisplay.map(popular => {
                     return (
@@ -39,7 +39,7 @@ import shorts from "../IMG/shorts.png";
                       name={popular.name}
                       price={popular.price}
                      />
-                            )
+                    )
                 })}
                 </Row>
             </Container>

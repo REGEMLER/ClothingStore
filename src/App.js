@@ -15,7 +15,6 @@ import Catalog from "./Pages/Catalog";
 import Cart from "./Pages/Cart";
 import Reference from "./Pages/Reference";
 import ProductPage from "./Pages/ProductPage";
-import Constructor from "./Pages/Constructor";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Comments from "./Pages/Comments";
@@ -37,7 +36,6 @@ function App() {
       <Route path="/comments" element={<Comments/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/product" element={<ProductPage/>}/>
-      <Route path="/constructor" element={<Constructor/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
     </Routes>

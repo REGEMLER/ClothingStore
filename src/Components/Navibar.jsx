@@ -58,7 +58,7 @@ const Navibar = () => {
                              </Nav>
                              <Nav className="my-2">
                                  {isAuth ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/cart"><img src={cart}/> Корзина</Link></Button> : <Button onClick={()=> navigate('/login')} variant="outline-light" className="me-3 my-2 my-md-0"><img src={cart}/>Корзина</Button>}
-                                 {isAuth ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/constructor">Создай свой дизайн</Link></Button> : <Button onClick={()=> navigate('/login')} variant="outline-light" className="me-3 my-2 my-md-0">Создай свой дизайн</Button>}
+                                 {isAuth ?  <Button variant="light" className="me-3 my-2 my-md-0"><Link style={{"color": "black"}} to="/register">Регистрация</Link></Button> : <Button onClick={()=> navigate('/login')} variant="outline-light" className="me-3 my-2 my-md-0">Регистрация</Button>}
                                  {isAuth ?  <Button variant="light" className="me-2 my-2 my-md-0" onClick={logOut}>Выйти</Button>:<Button variant= "outline-light" className="me-2 my-2 my-md-0" onClick={()=> navigate('/login')}>Войти</Button>}
                              </Nav>
                         </Navbar.Collapse>

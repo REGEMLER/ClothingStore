@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import cls from "../Styles/Styles.modules.scss";
+import cls from "../Styles/Questions.module.scss";
 import {Modal, Form, Button} from  "react-bootstrap";
 
  export const Questions = () => {
@@ -27,13 +27,13 @@ import {Modal, Form, Button} from  "react-bootstrap";
     }
 
     return(
-  <section className="questions">
-      <div className="questions-container">
-        <h2 className="questions-title">Остались вопросы?</h2>
-        <p className="questions-text">Заполните форму и менеджер свяжется с вами в ближайшее время.</p>
-        <div className="questionsBtns">
-          <button className="questions-btn" onClick={handleShow}>Задать вопрос</button>
-          <button className="questions-btn" onClick={callShow}>Позвонить</button>
+  <section className={cls.questions}>
+      <div className={cls.container}>
+        <h2 className={cls.title}>Остались вопросы?</h2>
+        <p className={cls.text}>Заполните форму и менеджер свяжется с вами в ближайшее время.</p>
+        <div className={cls.btns}>
+          <button className={cls.btn} onClick={handleShow}>Задать вопрос</button>
+          <button className={cls.btn} onClick={callShow}>Позвонить</button>
         </div>
       </div>
       <Modal show={show} onHide={handleClose}>

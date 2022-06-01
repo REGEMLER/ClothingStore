@@ -1,0 +1,26 @@
+@import "variables.module.scss";
+.exampleImg{
+    min-height: 400px;
+    background-color: #fff;
+    @media screen and (max-width: 768px){
+        min-height: 200px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.exampleTitle{
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $titleSize;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+    @media screen and (max-width: 768px){
+        font-size: $titleSizeMedia;
+    }
+}

@@ -1,0 +1,91 @@
+@import "variables.module.scss";
+.popular{
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: $mainColor;
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
+    .title{
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: $titleSize;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        @media screen and (max-width: 768px){
+            font-size: $titleSizeMedia;
+        }
+    }
+}
+
+.popularImg{
+    min-height: 450px;
+    background-color: #fff;
+    @media screen and (max-width: 768px){
+        min-height: 300px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.popularContent{
+    max-width: 400px;
+    .popularText{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: $mainFont;
+         font-style: normal;
+         .popularTitle{
+            font-weight: 400;
+            font-size: $textSize;
+         }
+         .popularPrice{
+            font-size: 30px;
+            font-weight: 500;
+            @media screen and (max-width: 768px){
+                font-size: $textSize;
+            }
+         }
+    }
+    .popularBtn{
+        width: 250px;
+        margin: 0 auto;
+        height: 57px;
+        display: flex;
+        justify-content: center;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+        border-radius: $btnSize;
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $btnSize;
+        text-align: center;
+        transition: all linear .4s;
+        &:hover{
+            transform: scale(1.1);
+        }
+        @media screen and (max-width: 768px){
+            width: 210px;
+            height: 40px;
+            font-size: $textSizeMedia;
+            margin-bottom: 5px;
+        }
+        .popularLink{
+            text-decoration: none;
+            color: $linkColor;
+            transition: all linear .2s;
+            font-family: $mainFont;
+            font-size: $textSize;
+            &:hover{
+                color:black;
+            }
+        }
+     }
+}

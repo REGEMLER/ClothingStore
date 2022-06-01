@@ -1,0 +1,61 @@
+@import "variables.module.scss";
+.card{
+    text-align: center;
+    .cardImg{
+        width: 330px;
+        height: 380px;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+        border-radius: 36px;
+        img{
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+        }
+    }
+    .content{
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        .title{
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 500;
+            text-align: center;
+            font-size: $textSize;
+            margin: 5px auto;
+        }
+        .text{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: $mainFont;
+             font-style: normal;
+             .size{
+                font-weight: 400;
+                font-size: $textSize;
+             }
+             .price{
+                font-size: 30px;
+                font-weight: 500;
+             }
+        }
+        .btn{
+            width: 250px;
+            margin: 0 auto;
+            height: 57px;
+            background: #FFFFFF;
+            box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+            border-radius: 36px;
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: $btnSize;
+            text-align: center;
+            transition: all linear .4s;
+            &:hover{
+                transform: scale(1.1);
+            }
+         }
+    }
+}

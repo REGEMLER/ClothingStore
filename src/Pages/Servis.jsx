@@ -3,7 +3,7 @@ import Subtitle from "../Components/Subtitle";
 import {Examples} from "../Components/Examples";
 import {Questions} from "../Components/Questions"; 
 import {Popular} from "../Components/Popular"; 
-import {Requiz} from "../Components/Requiz"; 
+import {Requisites} from "../Components/Requisites"; 
 import {Col, Container, Row, Button} from  "react-bootstrap";
 
 
@@ -32,7 +32,7 @@ const Servis = () => {
             </Container>
             <Examples/>
             <Popular/>
-            <Requiz/>
+            <Requisites/>
             <Questions/>
         </>
 

@@ -3,12 +3,10 @@ import {Container} from  "react-bootstrap";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import cls from "../Styles/Styles.modules.scss";
+import cls from "../Styles/Example.module.scss";
 import example1 from "../IMG/Example1.png";
 import example2 from "../IMG/Example2.png";
 import example3 from "../IMG/Example3.png";
-
-
 
 export const  Examples = () => {
 
@@ -23,14 +21,13 @@ export const  Examples = () => {
     return(
         <>
         <Container className="text-center my-5">
-            <h2 style={{"textAlign": "left"}}>Примеры наших работ:</h2>
+            <h2 className={cls.exampleTitle}>Примеры наших работ:</h2>
             <Slider {...settings}>
-                <div className="exampleImg"><img src={example1}/></div>
-                <div className="exampleImg"><img src={example2}/></div>
-                <div className="exampleImg"><img src={example3}/></div>
-                <div className="exampleImg"><img src={example1}/></div>
-                <div className="exampleImg"><img src={example2}/></div>
-                <div className="exampleImg"><img src={example3}/></div>
+                <div className={cls.exampleImg}><img src={example1}/></div>
+                <div className={cls.exampleImg}><img src={example2}/></div>
+                <div className={cls.exampleImg}><img src={example3}/></div>
+                <div className={cls.exampleImg}><img src={example1}/></div>
+                <div className={cls.exampleImg}><img src={example3}/></div>
             </Slider>
         </Container>
         </>

@@ -1,0 +1,46 @@
+@import "variables.module.scss";
+ 
+.deliveryImg{
+    width: 200px;
+    height: 200px;
+    background: $mainColor;
+    border-radius: 50%;
+    img{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        height: 90%;
+        object-fit: contain;
+        text-align: center;
+    }
+    @media screen and (max-width: 768px){
+        width: 100px;
+        height: 100px;
+    }
+}
+.deliveryTitle{
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $titleSize;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media screen and (max-width: 768px){
+        font-size: $titleSizeMedia;
+    }
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    .menuItem{
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: $textSize;
+        margin-bottom: 10px;
+        @media screen and (max-width: 768px){
+            font-size: $textSizeMedia;
+        }
+    }
+}

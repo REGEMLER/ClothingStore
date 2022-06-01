@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import { useAuth } from "../hooks/useAuth";
 import { useNavigate } from 'react-router-dom';
 import {Modal, Form, FormGroup, Button} from  "react-bootstrap";
+import cls from "../Styles/Message.module.scss";
 
 const Message = ({addComment}) => {
     const {isAuth} = useAuth(); 
@@ -31,11 +32,11 @@ const Message = ({addComment}) => {
     }
 
     return(
-        <section className="message">
-            <div className="message-container">
-                <h2 className="message-title">Хотите поделиться мнением?</h2>
-                <p className="message-text">Оставьте свой честны отзыв о сотрудничестве с нами, это поможет другим покупателям.</p>
-                {isAuth ?  <button className="message-btn" onClick={handleShow}>Оставить отзыв</button> : <button className="message-btn" onClick={()=>navigate("/login")}>Оставить отзыв</button>}
+        <section classNameme={cls.message}>
+            <div className={cls.messageContainer}>
+                <h2 className={cls.messageTitle}>Хотите поделиться мнением?</h2>
+                <p className={cls.messageText}>Оставьте свой честны отзыв о сотрудничестве с нами, это поможет другим покупателям.</p>
+                {isAuth ?  <button className={cls.messageBtn} onClick={handleShow}>Оставить отзыв</button> : <button className={cls.messageBtn} onClick={()=>navigate("/login")}>Оставить отзыв</button>}
                
             </div>
             <Modal show={show} onHide={handleClose}>

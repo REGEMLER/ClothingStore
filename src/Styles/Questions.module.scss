@@ -1,0 +1,60 @@
+@import "variables.module.scss";
+.questions{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: $mainColor;
+    text-align: center;
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
+    .container{
+        max-width: 750px;
+        margin: 0 auto;
+        .title{
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 500;
+            font-size: $titleSize;
+            margin-bottom: 10px;
+            @media screen and (max-width: 768px){
+                font-size: $titleSizeMedia;
+            }
+        }
+        
+        .text{
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: $textSize;
+            @media screen and (max-width: 768px){
+                font-size: $textSizeMedia;
+            }
+        }
+    }
+    
+    .btns{
+        display: flex;
+        justify-content: space-between;
+        .btn{
+            width: 320px;
+            height: 80px;
+            background: #FFFFFF;
+            box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+            border-radius: 58px;
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 300;
+            font-size: $btnSize;
+            transition: all linear .4s;
+             &:hover{
+               transform: scale(1.1);
+           }
+           @media screen and (max-width: 768px){
+            width: 210px;
+            height: 40px;
+            font-size: $textSizeMedia;
+        }
+        }
+    }
+}

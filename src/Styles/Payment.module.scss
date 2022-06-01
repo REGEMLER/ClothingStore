@@ -1,0 +1,42 @@
+@import "variables.module.scss";
+.container{
+    overflow: hidden;
+}
+.paymentImg{
+    width: 200px;
+    height: 200px;
+    background: $mainColor;
+    border-radius: 50%;
+    img{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        height: 90%;
+        object-fit: contain;
+        text-align: center;
+    }
+    @media screen and (max-width: 768px){
+        width: 100px;
+        height: 100px;
+    }
+}
+.paymentTitle{
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $titleSize;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media screen and (max-width: 768px){
+        font-size: $titleSizeMedia;
+    }
+ .paymentText{
+     width: 100%;
+     font-family: $mainFont;
+     font-weight: 400;
+     font-size: $textSize;
+     @media screen and (max-width: 768px){
+        font-size: $textSizeMedia;
+    }
+    }
+}

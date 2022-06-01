@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setItemInCart, deleteItemFromCart } from "../redux/cart/reducer";
-import cls from "../Styles/Styles.modules.scss"
+import cls from "../Styles/Card.module.scss"
 
 export const Card =({product,id,image,title,size,price}) =>{
     const dispatch = useDispatch();
@@ -19,21 +19,20 @@ export const Card =({product,id,image,title,size,price}) =>{
     }
 
     return(
-        <div key={id} className="kard">
-            <div className="cardImg"><img src={image}/></div>
-            <div className="cardContent">
-                <h4 className="cardTitle">{title}</h4>
-                <div className="cardText">
-                    <p className="cardTitle">Размер:</p>
-                    <p className="cardPrice">{size}</p>
+        <div key={id} className={cls.card}>
+            <div className={cls.cardImg}><img src={image}/></div>
+            <div className={cls.content}>
+                <h4 className={cls.title}>{title}</h4>
+                <div className={cls.text}>
+                    <p className={cls.size}>Размер:</p>
+                    <p className={cls.price}>{size}</p>
                 </div>
-                <div className="cardText">
-                    <p className="cardTitle">Цена:</p>
-                    <p className="cardPrice">{price} ₽</p>
+                <div className={cls.text}>
+                    <p className={cls.size}>Цена:</p>
+                    <p className={cls.price}>{price} ₽</p>
                 </div>
-                <button onClick={addInCart}>{isItemInCart ? "Удалить" : "В Корзину"}</button>
+                <button className={cls.btn} onClick={addInCart}>{isItemInCart ? "Удалить" : "В Корзину"}</button>
             </div>
         </div>
-
     )
 }

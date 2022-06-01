@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {setUser,setLogin} from "../redux/user/reducer";
 import {Link} from  "react-router-dom";
-import cls from "../Styles/Styles.modules.scss";
+import cls from "../Styles/Forms.module.scss";
 
 
 const Login = () => {
@@ -47,7 +47,7 @@ const Login = () => {
 
     return(
         <>
-            <div className="reg-container">
+            <div className={cls.regContainer}>
                 <form onSubmit={handleSubmit} action="" method="get" name="form1">
                     <fieldset>
                         <legend>Вход</legend>
@@ -55,9 +55,9 @@ const Login = () => {
                         <label for="form1_name">Имя пользователя <input type="text" name="form1_name"  placeholder="Имя пользователя" value={name} onChange={handleLogin}/></label>
                         <label for="form1_mail">Введите Ваш email <input type="email" name="form1_mail" required placeholder="www@example.gmail.com" value={mail} onChange={(e)=> setMail(e.target.value)}/></label>
                         <label for="form1_pass">Пароль<input type="password" name="form1_pass" id="form1_pass" value={pass} onChange={(e)=> setPass(e.target.value)}/></label>
-                        {err ? <p className="error">Некорректные данные</p> : null}
-                        <button className="register-btn" onClick={()=>handleUser(mail,pass)}>Войти</button>
-                        <button className="register-btn" onClick={()=> navigate('/')}>Отмена</button>
+                        {err ? <p className={cls.error}>Некорректные данные</p> : null}
+                        <button className={cls.registerBtn} onClick={()=>handleUser(mail,pass)}>Войти</button>
+                        <button className={cls.registerBtn} onClick={()=> navigate('/')}>Отмена</button>
                     </fieldset>
                 </form>
             </div>

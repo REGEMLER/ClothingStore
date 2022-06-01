@@ -1,0 +1,86 @@
+@import "variables.module.scss";
+
+.regContainer{
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    form{
+        background-color: $mainColor;
+        padding: 20px;
+        a {
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: $textSize;
+            text-decoration: none;
+            color: $linkColor;
+            &:hover{
+                color: black;
+                text-decoration: solid;
+            }
+        }
+        legend{
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 500;
+            font-size: $titleSizeMedia;
+            text-transform: uppercase;
+            margin: 10px 0;
+            @media screen and (max-width: 768px){
+                font-size: $textSize;
+        }
+
+        }
+        label{
+            display: block;
+            margin: 10px 0;
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: $textSize;
+            text-align: left;
+            @media screen and (max-width: 768px){
+                font-size: $textSizeMedia;
+    }
+        }
+        input{
+            display: block;
+            margin: 10px 0;
+            width: 500px;
+            height: 40px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+        }
+        .registerBtn{
+            width: 420px;
+            height: 80px;
+            background: #FFFFFF;
+            box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
+            border-radius: 58px;
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 300;
+            font-size: $btnSize;
+            transition: all linear .4s;
+            margin-bottom: 20px;
+             &:hover{
+               transform: scale(1.1);
+           }
+           @media screen and (max-width: 768px){
+            width: 300px;
+            height: 40px;
+            font-size: 22px;
+            }
+        }
+        .error{
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 400;
+            font-size: $textSizeMedia;
+            color: red;
+            text-align: left;
+        }
+    }
+}
