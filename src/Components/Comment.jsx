@@ -1,7 +1,7 @@
 import React from "react";
 import cls from "../Styles/Comment.module.scss";
 
-export const Comment = ({comment,name,body,image,email}) => {
+const Comment = ({comment,name,body,image,email}) => {
     return(
         <>
         <div className={cls.comment}>
@@ -17,3 +17,5 @@ export const Comment = ({comment,name,body,image,email}) => {
         </>
     )
 }
+
+export default React.memo(Comment);

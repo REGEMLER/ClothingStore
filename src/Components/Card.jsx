@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setItemInCart, deleteItemFromCart } from "../redux/cart/reducer";
 import cls from "../Styles/Card.module.scss"
 
-export const Card =({product,id,image,title,size,price}) =>{
+ const Card =({product,id,image,title,size,price}) =>{
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.itemsInCart);
     const isItemInCart = items.some((item) => item.id === product.id);
@@ -36,3 +36,5 @@ export const Card =({product,id,image,title,size,price}) =>{
         </div>
     )
 }
+
+export default React.memo(Card)

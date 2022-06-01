@@ -9,7 +9,7 @@ const Payment = () => {
     return(
         <>
         <Subtitle title='Оплата заказа'/>
-        <Container className="p-4 deliveryContainer" style={{overflow: "hidden"}}>
+        <Container className="p-4" style={{overflow: "hidden"}}>
             <Row className="align-items-center">
             <Col xs={5}><div className={cls.paymentImg}><img src={visa}/></div></Col>
                 <Col xs={7}>

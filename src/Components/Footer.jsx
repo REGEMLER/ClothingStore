@@ -15,6 +15,7 @@ const Styles = styled.div`
         font-weight: 400;
         font-size: 22px;
         color: #adb2b4;
+        transition: all linear .4s;
         &:hover{
             color: black;
         }

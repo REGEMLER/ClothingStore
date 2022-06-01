@@ -2,7 +2,7 @@ import React from "react";
 import {Popular} from "../Components/Popular"; 
 import { useSelector} from 'react-redux';
 import styled from "styled-components";
-import {Card} from "../Components/Card"; 
+import Card from "../Components/Card"; 
 
 const Styles = styled.div`
     .container {

@@ -32,10 +32,10 @@ const Message = ({addComment}) => {
     }
 
     return(
-        <section classNameme={cls.message}>
+        <section className={cls.message}>
             <div className={cls.messageContainer}>
                 <h2 className={cls.messageTitle}>Хотите поделиться мнением?</h2>
-                <p className={cls.messageText}>Оставьте свой честны отзыв о сотрудничестве с нами, это поможет другим покупателям.</p>
+                <p className={cls.messageText}>Оставьте свой честный отзыв о сотрудничестве с нами, это поможет другим покупателям.</p>
                 {isAuth ?  <button className={cls.messageBtn} onClick={handleShow}>Оставить отзыв</button> : <button className={cls.messageBtn} onClick={()=>navigate("/login")}>Оставить отзыв</button>}
                
             </div>

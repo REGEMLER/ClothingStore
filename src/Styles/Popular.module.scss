@@ -59,14 +59,15 @@
         height: 57px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         background: #FFFFFF;
         box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.25);
-        border-radius: $btnSize;
+        border-radius: 58px;
         font-family: $mainFont;
         font-style: normal;
         font-weight: 400;
         font-size: $btnSize;
-        text-align: center;
         transition: all linear .4s;
         &:hover{
             transform: scale(1.1);
@@ -80,9 +81,9 @@
         .popularLink{
             text-decoration: none;
             color: $linkColor;
-            transition: all linear .2s;
             font-family: $mainFont;
             font-size: $textSize;
+            transition: all linear .2s;
             &:hover{
                 color:black;
             }

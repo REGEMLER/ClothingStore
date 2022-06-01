@@ -30,13 +30,14 @@
     @media screen and (max-width: 768px){
         font-size: $titleSizeMedia;
     }
- .paymentText{
-     width: 100%;
-     font-family: $mainFont;
-     font-weight: 400;
-     font-size: $textSize;
-     @media screen and (max-width: 768px){
-        font-size: $textSizeMedia;
-    }
-    }
+}
+
+.paymentText{
+    width: 100%;
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: $textSize;
+    @media screen and (max-width: 768px){
+       font-size: $textSizeMedia;
+   }
 }

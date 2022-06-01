@@ -15,10 +15,10 @@ const Styles = styled.div`
     .categoryLink{
         text-decoration: none;
         color: black;
+        font-family: 'Montserrat';
     } 
 `
-
-export const CategoryCard = ({id,image,title,text,clothesItem}) => {
+ const CategoryCard = ({id,image,title,text,clothesItem}) => {
 
     const dispatch = useDispatch(); 
     const handleClick = () => {
@@ -38,3 +38,5 @@ export const CategoryCard = ({id,image,title,text,clothesItem}) => {
         </Styles>
     )
 }
+
+export default React.memo(CategoryCard);

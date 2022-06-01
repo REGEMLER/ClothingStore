@@ -12,13 +12,16 @@ import cart from "../IMG/cart.png"
 const Styles = styled.div`
     a, .navbar-brand, .navbar-nav, .nav-link {
         text-decoration: none;
+        font-family: 'Montserrat';
+        font-size: 20px;
         color: #adb2b4;
+        transition: all linear .4s;
         &:hover{
             color: white;
         }
     .active{
         color:white; 
-    }
+        }
     } 
 `
 

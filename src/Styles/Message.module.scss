@@ -1,8 +1,14 @@
 @import "variables.module.scss";
+
 .message{
     width: 100%;
     margin: 0 auto;
+    padding: 50px;
     background-color: $mainColor;
+    text-align: center;
+    @media screen and (max-width: 768px){
+        padding: 5px;
+    }
     .messageContainer{
         max-width: 1000px;
         margin: 0 auto;

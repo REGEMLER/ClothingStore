@@ -1,5 +1,5 @@
 import React from "react";
-import {ShopWindowCard} from "./ShopWindowCard"; 
+import ShopWindowCard from "./ShopWindowCard"; 
 import tShort from "../IMG/t-short.png";
 import bickl from "../IMG/bickl.png";
 import boots from "../IMG/boots.png";

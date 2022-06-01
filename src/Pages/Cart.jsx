@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import {Card} from "../Components/Card"; 
+import Card from "../Components/Card"; 
 import {Link} from  "react-router-dom";
 import {Questions} from '../Components/Questions';
 import {Container,Col, Row} from  "react-bootstrap";

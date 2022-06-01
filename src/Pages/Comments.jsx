@@ -3,8 +3,9 @@ import {useSelector, useDispatch} from "react-redux";
 import { useAuth } from "../hooks/useAuth";
 import { fetchComments } from "../redux/comments/ActionCreator";
 import Subtitle from "../Components/Subtitle";
-import {Comment} from "../Components/Comment";
+import Comment from "../Components/Comment";
 import Message from "../Components/Message";
+import Loader from "../Components/Loader";
 
 const  Comments = () => {
     const {email,id,login} = useAuth(); 
@@ -26,7 +27,7 @@ const  Comments = () => {
     return(
         <>
             <Subtitle title="Отзывы"/>
-            {isLoading && <h2>Идет загрузка...</h2>}
+            {isLoading && <Loader/>}
             {error && <h2>{error}</h2>}
             {comments.map(comment => {
                 return(
