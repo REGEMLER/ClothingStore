@@ -42,11 +42,10 @@ const  Comments = () => {
                     <Comment
                     comment={comment}
                     key={comment.id}
-                    isUsers={false}
                     name={comment.name}
                     body={comment.body}
                     image="https://st3.depositphotos.com/19428878/37102/v/170/depositphotos_371028948-stock-illustration-gentleman-avatar-profile-icon-image.jpg?forcejpeg=trueS"
-                    email={comment.email}/>
+                    mail={comment.email}/>
                 )
             })}
             {userComments.map(userComment => {
@@ -54,11 +53,10 @@ const  Comments = () => {
                     <Comment
                     comment={userComment}
                     key={userComment.id}
-                    isUsers={true}
                     name={userComment.name}
                     body={userComment.body}
                     image="https://st3.depositphotos.com/19428878/37102/v/170/depositphotos_371028948-stock-illustration-gentleman-avatar-profile-icon-image.jpg?forcejpeg=trueS"
-                    email={userComment.email}/>
+                    mail={userComment.email}/>
                 )
             })}
             <Message addComment={addComment}/>
