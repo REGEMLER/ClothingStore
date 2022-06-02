@@ -17,6 +17,7 @@ import Reference from "./Pages/Reference";
 import ProductPage from "./Pages/ProductPage";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import PathError from "./Pages/PathError";
 import Comments from "./Pages/Comments";
 import Navibar from './Components/Navibar';
 import Footer from './Components/Footer';
@@ -28,6 +29,7 @@ function App() {
     <Navibar/>
     <Routes>
       <Route exact path="/" element={<Home/>}/>
+      <Route path="/ClothingStore" element={<Home/>}/>
       <Route path="/catalog" element={<Catalog/>}/>
       <Route path="/delivery" element={<Delivery/>}/>
       <Route path="/payment" element={<Payment/>}/>
@@ -38,6 +40,7 @@ function App() {
       <Route path="/product" element={<ProductPage/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="*" element={<PathError/>}/>
     </Routes>
     <Footer/>
     </Router>

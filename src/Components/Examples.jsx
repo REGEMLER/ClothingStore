@@ -28,6 +28,7 @@ export const  Examples = () => {
                 <div className={cls.exampleImg}><img src={example3}/></div>
                 <div className={cls.exampleImg}><img src={example1}/></div>
                 <div className={cls.exampleImg}><img src={example3}/></div>
+                <div className={cls.exampleImg}><img src={example2}/></div>
             </Slider>
         </Container>
         </>

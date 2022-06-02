@@ -8,7 +8,6 @@ import post2 from "../IMG/Delivery.png";
 
 
 
-
 const Delivery = () => {
     return(
         <>

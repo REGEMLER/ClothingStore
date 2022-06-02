@@ -25,7 +25,6 @@ const Register = () => {
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
         .then(({user})=>{
-            console.log(user);
             dispatch(
                 setUser({
                     email: user.email,
@@ -33,11 +32,11 @@ const Register = () => {
                     token: user.accessToken,
                 })
             );
-            navigate('/login');
+            navigate('/catalog');
             setErr(false);
         })
-        .catch(()=>{
-            setErr(true)
+        .catch((e)=>{
+            setTimeout(() => setErr(true),1000);
         })
     }
 
