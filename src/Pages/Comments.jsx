@@ -1,7 +1,8 @@
-import React,{useEffect, useState, useCallback} from "react";
+import React,{useEffect, useCallback} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { useAuth } from "../hooks/useAuth";
 import { fetchComments } from "../redux/comments/ActionCreator";
+import { setComment } from "../redux/comments/reducer";
 import Subtitle from "../Components/Subtitle";
 import Comment from "../Components/Comment";
 import Message from "../Components/Message";
@@ -9,21 +10,28 @@ import Loader from "../Components/Loader";
 
 const  Comments = () => {
     const {email,id,login} = useAuth(); 
-    const comments = useSelector((state) => state.comments.comments);
-    const isLoading = useSelector((state) => state.comments.isLoading);
-    const error = useSelector((state) => state.comments.error);
     const dispatch = useDispatch();
 
-    const [userComments, setUserComments] = useState([]); 
-    const newComment = (userInput) => {
-        const comment = {id, name: login, body: userInput, email};
-        setUserComments([...userComments,comment]);
+    const comments = useSelector((state) => state.comments.comments);
+    const isLoading = useSelector((state) => state.comments.isLoading);
+    const userComments = useSelector((state) => state.comments.userComments);
+    const error = useSelector((state) => state.comments.error);
+
+
+    const userComment = (userInput) => {
+        const comment = {id: new Date(), name: login, body: userInput, email};
+        return comment;
     }
+    const newComment = (userInput) => {
+        dispatch(setComment(userComment(userInput)));
+    }
+
     const addComment = useCallback(newComment);
 
     useEffect(()=>{
         dispatch(fetchComments());
         },[])
+
     return(
         <>
             <Subtitle title="Отзывы"/>
@@ -34,6 +42,7 @@ const  Comments = () => {
                     <Comment
                     comment={comment}
                     key={comment.id}
+                    isUsers={false}
                     name={comment.name}
                     body={comment.body}
                     image="https://st3.depositphotos.com/19428878/37102/v/170/depositphotos_371028948-stock-illustration-gentleman-avatar-profile-icon-image.jpg?forcejpeg=trueS"
@@ -45,6 +54,7 @@ const  Comments = () => {
                     <Comment
                     comment={userComment}
                     key={userComment.id}
+                    isUsers={true}
                     name={userComment.name}
                     body={userComment.body}
                     image="https://st3.depositphotos.com/19428878/37102/v/170/depositphotos_371028948-stock-illustration-gentleman-avatar-profile-icon-image.jpg?forcejpeg=trueS"

@@ -51,9 +51,9 @@ const Login = () => {
                     <fieldset>
                         <legend>Вход</legend>
                         <p>Нет аккаунта?</p><Link to="/register">Зарегистрируйтесь</Link>
-                        <label for="form1_name">Имя пользователя <input type="text" name="form1_name"  placeholder="Имя пользователя" value={name} onChange={handleLogin}/></label>
                         <label for="form1_mail">Введите Ваш email <input type="email" name="form1_mail" required placeholder="www@example.gmail.com" value={mail} onChange={(e)=> setMail(e.target.value)}/></label>
                         <label for="form1_pass">Пароль<input type="password" name="form1_pass" id="form1_pass" value={pass} onChange={(e)=> setPass(e.target.value)}/></label>
+                        <label for="form1_name">Имя пользователя<input type="text" name="form1_name"  placeholder="Имя пользователя" value={name} onChange={handleLogin}/></label>
                         {err ? <p className={cls.error}>Некорректные данные</p> : null}
                         <button className={cls.registerBtn} onClick={()=>handleUser(mail,pass)}>Войти</button>
                         <button className={cls.registerBtn} onClick={()=> navigate('/')}>Отмена</button>

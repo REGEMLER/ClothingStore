@@ -5,6 +5,7 @@ const commentsSlice = createSlice({
     name: "comments",
     initialState:{
         comments:[],
+        userComments:[],
         isLoading: false,
         error: ""
     },
@@ -21,8 +22,16 @@ const commentsSlice = createSlice({
             state.isLoading = false;
             state.error = action.payload;
         },
+    },
+    reducers:{
+        setComment: (state,action) => {
+            state.userComments.push(action.payload);
+        },
+        deleteComment: (state, action) => {
+            state.userComments = state.userComments.filter(item => item.id !==action.payload);
+        }
     }
 })
 
-export const {} = commentsSlice.actions; 
+export const {setComment,deleteComment} = commentsSlice.actions; 
 export default commentsSlice.reducer; 
