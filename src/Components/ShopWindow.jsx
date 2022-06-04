@@ -24,7 +24,7 @@ const Styles = styled.div`
 
  export const ShopWindow = () => {
     return(
-        <Container className="my-5 text-center text-md-start">
+        <Container className="my-5 text-center text-md-start" style={{overflow: "hidden"}}>
             <Styles><h2>Богатый выбор</h2></Styles>
             <Row className="my-3">
                 <Col className="my-2 my-sm- d-flex justify-content-center"><ShopWindowCard image={tShort} title="Верх" text="Футболки, майки"/></Col>
