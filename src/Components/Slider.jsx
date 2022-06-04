@@ -44,7 +44,7 @@ const Styles = styled.div`
   };
     return (
         <Styles>
-            <Carousel activeIndex={index} onSelect={handleSelect}>
+            <Carousel activeIndex={index} onSelect={handleSelect} style={{overflow: "hidden"}}>
                   <Carousel.Item>
                      <img
                     className="d-block w-100"
