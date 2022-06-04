@@ -1,53 +1,37 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, {useState} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { clearCart } from "../redux/cart/reducer";
 import Card from "../Components/Card"; 
-import {Link} from  "react-router-dom";
+import {Link,useNavigate} from  "react-router-dom";
 import {Questions} from '../Components/Questions';
-import {Container,Col, Row} from  "react-bootstrap";
-import styled from "styled-components";
-const Styles = styled.div`
-    h2{
-        width: 100%;
-        margin: 0 auto;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 64px;
-        text-align: center;
-        @media screen and (max-width: 768px){
-            font-size: 48px;
-        }
-    }
-    p{
-        width: 100%;
-        margin: 0 auto;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 26px;
-        margin-bottom: 10px;
-        text-align: center;
-        @media screen and (max-width: 768px){
-            font-size: 20px;
-        }
-    }
-    a{
-        text-decoration: none;
-        color: #adb2b4;
-        &:hover{
-            color: black;
-        }
-    } 
-`
-
+import {Container,Col, Row,Modal, Button} from  "react-bootstrap";
+import cls from "../Styles/Cart.module.scss"
 
 const Cart = () => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const items = useSelector((state) => state.cart.itemsInCart);
-    const totalPrice = items.reduce((acc, elem) => acc+=Number(elem.price),0)
+    const totalPrice = items.reduce((acc, elem) => acc+=Number(elem.price),0);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const checkout = () => {
+        dispatch(clearCart());
+        handleShow();
+    }
+    const clear = () => {
+        dispatch(clearCart());
+    }
+    const pay = () => {
+        handleClose();
+        navigate('/payment');
+    }
+    
 
     return (
         <>
-        <Styles>
         <Container> 
             <Row className="my-4">
             {items.length > 0 ? items.map(product =>{
@@ -63,12 +47,21 @@ const Cart = () => {
                          />
                     </Col>
                 )
-            }): <p>Корзина пуста! Купите уже что-нибудь! <Link activeClassName="active" to="/catalog">Каталог</Link> </p>                              
+            }): <p className={cls.text}>Корзина пуста! Купите уже что-нибудь! <Link activeClassName="active" to="/catalog">Каталог</Link> </p>                              
             }
             </Row>
-            <h2>Всего к оплате: {totalPrice} ₽</h2>
+            <h2 className={cls.total}>Всего к оплате: {totalPrice} ₽</h2>
+            {items.length > 0 ? <div className={cls.btns}>
+                <button onClick={checkout} className={cls.btn}>Оплатить</button>
+                <button onClick={clear} className={cls.btn}>Очистить корзину</button>
+                                </div>: 
+                null }
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton><Modal.Title>Спасибо!</Modal.Title></Modal.Header>
+                <Modal.Body>Ваш заказ оформлен! Прготовьтесь к оплате!</Modal.Body>
+            <Modal.Footer><Button variant="secondary" onClick={pay}>ОК</Button></Modal.Footer>
+        </Modal>
         </Container>
-        </Styles>
         <Questions/>
         </>
     )

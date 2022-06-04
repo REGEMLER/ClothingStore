@@ -75,7 +75,7 @@ import {Modal, Form, Button} from  "react-bootstrap";
           <Button variant="primary" onClick={succeesShow2}>Отправить</Button>
         </Modal.Footer>
       </Modal>
-        <Modal show={succes} onHide={succesClose}>
+      <Modal show={succes} onHide={succesClose}>
         <Modal.Header closeButton><Modal.Title>Поздравляем!</Modal.Title></Modal.Header>
         <Modal.Body>Ваш запрос отправлен! Наш менеджер скоро ответит Вам!</Modal.Body>
         <Modal.Footer><Button variant="secondary" onClick={succesClose}>ОК</Button></Modal.Footer>

@@ -7,6 +7,10 @@
     height: 200px;
     background: $mainColor;
     border-radius: 50%;
+    transition: all linear .4s;
+    &:hover{
+         transform: scale(1.1);
+        }
     img{
         display: block;
         width: 90%;
