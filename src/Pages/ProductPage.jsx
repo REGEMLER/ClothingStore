@@ -23,15 +23,15 @@ const ProductPage = () => {
     if(!card) return null;
 
     const raiment = [
-        {id: card.id+11, title: card.titleInItem, size: card.size, price: "150", image: card.image},
-        {id: card.id+12, title: card.titleInItem, size: card.size, price: "200", image: card.image},
-        {id: card.id+13, title: card.titleInItem, size: card.size, price: "250", image: card.image},
-        {id: card.id+14, title: card.titleInItem, size: card.size, price: "350", image: card.image},
-        {id: card.id+15, title: card.titleInItem, size: card.size, price: "450", image: card.image},
-        {id: card.id+16, title: card.titleInItem, size: card.size, price: "500", image: card.image},
-        {id: card.id+17, title: card.titleInItem, size: card.size, price: "550", image: card.image},
-        {id: card.id+18, title: card.titleInItem, size: card.size, price: "650", image: card.image},
-        {id: card.id+19, title: card.titleInItem, size: card.size, price: "1000",image: card.image},
+        {id: card.id+11, title: card.titleInItem[0], size: card.size[0], price: card.price[0], image: card.images[0]},
+        {id: card.id+12, title: card.titleInItem[1], size: card.size[1], price: card.price[1], image: card.images[1]},
+        {id: card.id+13, title: card.titleInItem[2], size: card.size[2], price: card.price[2], image: card.images[2]},
+        {id: card.id+14, title: card.titleInItem[3], size: card.size[3], price: card.price[3], image: card.images[3]},
+        {id: card.id+15, title: card.titleInItem[4], size: card.size[4], price: card.price[4], image: card.images[4]},
+        {id: card.id+16, title: card.titleInItem[5], size: card.size[2], price: card.price[5], image: card.images[5]},
+        {id: card.id+17, title: card.titleInItem[6], size: card.size[1], price: card.price[6], image: card.images[6]},
+        {id: card.id+18, title: card.titleInItem[7], size: card.size[3], price: card.price[7], image: card.images[7]},
+        {id: card.id+19, title: card.titleInItem[8], size: card.size[0], price: card.price[8], image: card.images[8]},
     ];
 
     return(

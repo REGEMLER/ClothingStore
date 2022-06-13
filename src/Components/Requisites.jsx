@@ -1,9 +1,10 @@
 import React from "react";
 import {Col, Container, Row} from  "react-bootstrap";
+// import { MapOfShop } from "./MapOfShop";
 import map  from "../IMG/map.png";
 import cls from "../Styles/Requisites.module.scss";
 
-const requisites = ["ООО «Clothes-Team»", "Юридически адрес: 123456, г. Москва, ул. Подвойского, д. 14, стр. 7", "Почтовый адрес:	123456, г. Москва, ул. Подвойского, д. 14, стр. 7",
+const requisites = ["ООО «Clothes-Team»", "Юридически адрес: 123456, г. Гомель, ул. Троллейбусная, д. 12В", "Почтовый адрес: 123456, г. Гомель, ул. Троллейбусная, д. 12В",
  "ИНН: 7712345678", "КПП: 779101001", "БИК: 044521234", "Р/С: 40702810123450101230", "К/С: 30101234500000000225", "ОГРН: 1047712345678"];
 
 export const Requisites = () => {
@@ -22,6 +23,9 @@ export const Requisites = () => {
                 <img className={cls.img} src={map}/>
                 </Col>
             </Row>
+            {/* <Row>
+                <MapOfShop/>
+            </Row> */}
         </Container>
         </>
     )

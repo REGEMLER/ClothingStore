@@ -6,6 +6,9 @@ import {Link} from  "react-router-dom";
 import { setCurrentCard } from "../redux/card/reducer";
 const Styles = styled.div`
     .card {
+        width: 18rem;
+        min-height: 400px;
+        max-height: 470px; 
         margin: 0 auto;
         transition: all linear .4s;
         &:hover{
@@ -26,7 +29,7 @@ const Styles = styled.div`
     }
 
     return(<Styles>
-        <Card onClick={handleClick} key={id} style={{ width: '18rem', minHeight: "400px", maxHeight: "470px" }}>
+        <Card onClick={handleClick} key={id}>
         <Link className="categoryLink" to="/product">
         <Card.Img variant="top" src={image}/>
               <Card.Body>

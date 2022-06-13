@@ -58,7 +58,7 @@ const Cart = () => {
                 null }
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton><Modal.Title>Спасибо!</Modal.Title></Modal.Header>
-                <Modal.Body>Ваш заказ оформлен! Прготовьтесь к оплате!</Modal.Body>
+                <Modal.Body>Ваш заказ оформлен!</Modal.Body>
             <Modal.Footer><Button variant="secondary" onClick={pay}>ОК</Button></Modal.Footer>
         </Modal>
         </Container>
