@@ -1,17 +1,21 @@
 @import "variables.module.scss";
-.container{
+
+.container {
     overflow: hidden;
 }
-.paymentImg{
+
+.paymentImg {
     width: 200px;
     height: 200px;
     background: $mainColor;
     border-radius: 50%;
     transition: all linear .4s;
-    &:hover{
-         transform: scale(1.1);
-        }
-    img{
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    img {
         display: block;
         width: 90%;
         margin: 0 auto;
@@ -19,29 +23,33 @@
         object-fit: contain;
         text-align: center;
     }
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         width: 100px;
         height: 100px;
     }
 }
-.paymentTitle{
+
+.paymentTitle {
     font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: $titleSize;
     text-transform: uppercase;
     margin-bottom: 10px;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         font-size: $titleSizeMedia;
     }
 }
 
-.paymentText{
+.paymentText {
     width: 100%;
     font-family: $mainFont;
     font-weight: 400;
     font-size: $textSize;
-    @media screen and (max-width: 768px){
-       font-size: $textSizeMedia;
-   }
+
+    @media screen and (max-width: 768px) {
+        font-size: $textSizeMedia;
+    }
 }

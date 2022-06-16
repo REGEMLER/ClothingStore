@@ -1,33 +1,36 @@
 @import "variables.module.scss";
 
-.title{
+.title {
     font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: $titleSize;
     text-transform: uppercase;
     margin-bottom: 10px;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         font-size: $titleSizeMedia;
     }
 }
 
-.menu{
+.menu {
     list-style: none;
     padding: 0;
-    .menuItem{
+
+    .menuItem {
         font-family: $mainFont;
         font-style: normal;
         font-weight: 400;
         font-size: $textSize;
         margin-bottom: 10px;
-        @media screen and (max-width: 768px){
+
+        @media screen and (max-width: 768px) {
             font-size: $textSizeMedia;
         }
     }
 }
 
-.img{
+.img {
     width: 400px;
     height: 400px;
 }

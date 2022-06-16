@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Container} from  "react-bootstrap";
-
+import { Container } from "react-bootstrap";
 
 const Styles = styled.div`
     div {
@@ -22,7 +21,7 @@ const Styles = styled.div`
     }
 `
 
- const Subtitle = ({title}) => {
+const Subtitle = ({ title }) => {
     return (
         <Styles><div><Container><h2>{title}</h2></Container></div></Styles>
     )

@@ -3,24 +3,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { setItemInCart, deleteItemFromCart } from "../redux/cart/reducer";
 import cls from "../Styles/Card.module.scss"
 
- const Card =({product,id,image,title,size,price}) =>{
+const Card = ({ product, id, image, title, size, price }) => {
     const dispatch = useDispatch();
     const items = useSelector((state) => state.cart.itemsInCart);
     const isItemInCart = items.some((item) => item.id === product.id);
-
 
     const addInCart = (e) => {
         e.stopPropagation();
         if (isItemInCart) {
             dispatch(deleteItemFromCart(product.id));
-         } else {
-             dispatch(setItemInCart(product));
+        } else {
+            dispatch(setItemInCart(product));
         }
     }
 
-    return(
+    return (
         <div key={id} className={cls.card}>
-            <div className={cls.cardImg}><img src={image}/></div>
+            <div className={cls.cardImg}><img src={image} /></div>
             <div className={cls.content}>
                 <h4 className={cls.title}>{title}</h4>
                 <div className={cls.text}>

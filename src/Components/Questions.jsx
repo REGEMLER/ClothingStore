@@ -1,33 +1,28 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import cls from "../Styles/Questions.module.scss";
-import {Modal, Form, Button} from  "react-bootstrap";
+import { Modal, Form, Button } from "react-bootstrap";
 
- export const Questions = () => {
-    const [show, setShow] = useState(false);
-    const [call, setCall] = useState(false);
-    const [succes, setSucces] = useState(false);
+export const Questions = () => {
+  const [show, setShow] = useState(false);
+  const [call, setCall] = useState(false);
+  const [succes, setSucces] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const callClose = () => setCall(false);
+  const callShow = () => setCall(true);
+  const succesClose = () => setSucces(false);
+  const succeesShow1 = () => {
+    handleClose();
+    setSucces(true);
+  }
+  const succeesShow2 = () => {
+    callClose();
+    setSucces(true);
+  }
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    const callClose = () => setCall(false);
-    const callShow = () =>  setCall(true);
-
-    const succesClose = () => setSucces(false);
-
-    const succeesShow1 = () => {
-        handleClose();
-        setSucces(true);
-    }
-
-    const succeesShow2 = () => {
-        callClose();
-        setSucces(true);
-    }
-
-    return(
-  <section className={cls.questions}>
+  return (
+    <section className={cls.questions}>
       <div className={cls.container}>
         <h2 className={cls.title}>Остались вопросы?</h2>
         <p className={cls.text}>Заполните форму и менеджер свяжется с вами в ближайшее время.</p>
@@ -37,15 +32,15 @@ import {Modal, Form, Button} from  "react-bootstrap";
         </div>
       </div>
       <Modal show={show} onHide={handleClose}>
-       <Modal.Header closeButton><Modal.Title>Что Вас интересует?</Modal.Title></Modal.Header>
+        <Modal.Header closeButton><Modal.Title>Что Вас интересует?</Modal.Title></Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="name@example.com"
-              autoFocus/>
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                autoFocus />
             </Form.Group>
             <Form.Group
               className="mb-3"
@@ -80,6 +75,6 @@ import {Modal, Form, Button} from  "react-bootstrap";
         <Modal.Body>Ваш запрос отправлен! Наш менеджер скоро ответит Вам!</Modal.Body>
         <Modal.Footer><Button variant="secondary" onClick={succesClose}>ОК</Button></Modal.Footer>
       </Modal>
-  </section>
-    )
+    </section>
+  )
 }

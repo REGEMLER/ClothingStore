@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Container} from  "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 
 const Styles = styled.div`
@@ -23,7 +23,7 @@ const Styles = styled.div`
     }
 `
 
- const PathError = () => {
+const PathError = () => {
     return (
         <Styles><div><Container><h2>404 Страницы не сущестует</h2></Container></div></Styles>
     )

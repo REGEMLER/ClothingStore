@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const cardSlice = createSlice({
     name: "cards",
-    initialState:{
+    initialState: {
         currentCard: null
     },
     reducers: {
@@ -12,5 +12,5 @@ const cardSlice = createSlice({
     }
 })
 
-export const {setCurrentCard} = cardSlice.actions; 
+export const { setCurrentCard } = cardSlice.actions;
 export default cardSlice.reducer; 

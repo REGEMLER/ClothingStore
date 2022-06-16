@@ -1,18 +1,21 @@
 @import "variables.module.scss";
-.exampleImg{
+
+.exampleImg {
     min-height: 400px;
     background-color: #fff;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         min-height: 200px;
     }
-    img{
+
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
 
-.exampleTitle{
+.exampleTitle {
     font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
@@ -20,7 +23,8 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     text-align: left;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         font-size: $titleSizeMedia;
     }
 }

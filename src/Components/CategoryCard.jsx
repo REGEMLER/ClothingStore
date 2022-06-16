@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {Card} from  "react-bootstrap";
+import { Card } from "react-bootstrap";
 import styled from "styled-components";
-import {Link} from  "react-router-dom";
+import { Link } from "react-router-dom";
 import { setCurrentCard } from "../redux/card/reducer";
 const Styles = styled.div`
     .card {
@@ -21,24 +21,24 @@ const Styles = styled.div`
         font-family: 'Montserrat';
     } 
 `
- const CategoryCard = ({id,image,title,text,clothesItem}) => {
+const CategoryCard = ({ id, image, title, text, clothesItem }) => {
 
-    const dispatch = useDispatch(); 
+    const dispatch = useDispatch();
     const handleClick = () => {
         dispatch(setCurrentCard(clothesItem));
     }
 
-    return(<Styles>
+    return (<Styles>
         <Card onClick={handleClick} key={id}>
-        <Link className="categoryLink" to="/product">
-        <Card.Img variant="top" src={image}/>
-              <Card.Body>
-                 <Card.Title>{title}</Card.Title>
-                 <Card.Text>{text}</Card.Text>
-              </Card.Body>
-         </Link>
+            <Link className="categoryLink" to="/product">
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Text>{text}</Card.Text>
+                </Card.Body>
+            </Link>
         </Card>
-        </Styles>
+    </Styles>
     )
 }
 

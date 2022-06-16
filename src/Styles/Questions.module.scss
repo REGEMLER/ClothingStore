@@ -1,42 +1,49 @@
 @import "variables.module.scss";
-.questions{
+
+.questions {
     width: 100%;
     margin: 0 auto;
     padding: 50px;
     background-color: $mainColor;
     text-align: center;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         padding: 5px;
     }
-    .container{
+
+    .container {
         max-width: 750px;
         margin: 0 auto;
-        .title{
+
+        .title {
             font-family: $mainFont;
             font-style: normal;
             font-weight: 500;
             font-size: $titleSize;
             margin-bottom: 10px;
-            @media screen and (max-width: 768px){
+
+            @media screen and (max-width: 768px) {
                 font-size: $titleSizeMedia;
             }
         }
-        
-        .text{
+
+        .text {
             font-family: $mainFont;
             font-style: normal;
             font-weight: 400;
             font-size: $textSize;
-            @media screen and (max-width: 768px){
+
+            @media screen and (max-width: 768px) {
                 font-size: $textSizeMedia;
             }
         }
     }
-    
-    .btns{
+
+    .btns {
         display: flex;
         justify-content: space-between;
-        .btn{
+
+        .btn {
             width: 320px;
             height: 80px;
             background: #FFFFFF;
@@ -47,14 +54,16 @@
             font-weight: 300;
             font-size: $btnSize;
             transition: all linear .4s;
-             &:hover{
-               transform: scale(1.1);
-           }
-           @media screen and (max-width: 768px){
-            width: 210px;
-            height: 40px;
-            font-size: $textSizeMedia;
-        }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 210px;
+                height: 40px;
+                font-size: $textSizeMedia;
+            }
         }
     }
 }

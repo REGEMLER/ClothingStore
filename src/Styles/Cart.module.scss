@@ -1,6 +1,6 @@
 @import "variables.module.scss";
 
-.total{
+.total {
     width: 100%;
     margin: 0 auto;
     font-family: $mainFont;
@@ -8,11 +8,13 @@
     font-weight: 500;
     font-size: $titleSize;
     text-align: center;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         font-size: $titleSizeMedia;
     }
 }
-.text{
+
+.text {
     width: 100%;
     margin: 0 auto;
     font-family: $mainFont;
@@ -21,25 +23,29 @@
     font-size: $textSize;
     margin-bottom: 10px;
     text-align: center;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         font-size: 20px;
     }
 }
-a{
+
+a {
     text-decoration: none;
     color: #adb2b4;
-    &:hover{
+
+    &:hover {
         color: black;
     }
-} 
+}
 
-.btns{
+.btns {
     width: 100%;
     margin: 20px auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    .btn{
+
+    .btn {
         width: 370px;
         height: 80px;
         background: #FFFFFF;
@@ -50,13 +56,15 @@ a{
         font-weight: 300;
         font-size: $btnSize;
         transition: all linear .4s;
-         &:hover{
-           transform: scale(1.1);
-       }
-       @media screen and (max-width: 768px){
-        width: 300px;
-        height: 60px;
-        font-size: $textSize;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 300px;
+            height: 60px;
+            font-size: $textSize;
         }
     }
 }

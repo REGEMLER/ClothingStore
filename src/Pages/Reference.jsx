@@ -1,7 +1,7 @@
 import React from "react";
 import Subtitle from "../Components/Subtitle";
-import {Container, Row, Accordion} from  "react-bootstrap";
-import {Questions} from "../Components/Questions"; 
+import { Container, Row, Accordion } from "react-bootstrap";
+import { Questions } from "../Components/Questions";
 import styled from "styled-components";
 const Styles = styled.div`
      .accordion-item {
@@ -11,10 +11,10 @@ const Styles = styled.div`
     } 
 `
 const Reference = () => {
-    return(
+    return (
         <>  <Styles>
-            <Subtitle title='Вопросы'/>
-            <Container className="w-100 my-4 deliveryContainer" style={{overflow: "hidden"}}>
+            <Subtitle title='Вопросы' />
+            <Container className="w-100 my-4 deliveryContainer" style={{ overflow: "hidden" }}>
                 <Row className="w-100 my-2">
                     <h2>Оформление заказа</h2>
                     <Accordion defaultActiveKey="0">
@@ -22,7 +22,7 @@ const Reference = () => {
                             <Accordion.Header>Актуальны ли цены на сайте?</Accordion.Header>
                             <Accordion.Body>Все цены на сайте актуальны. Цены постоянно обновляются. Однако, актуальные скидки на товары может уточнить менеджер по Вашему запросу, поэтому окончательную цену уточняйте непосредственно у менеджеров нашей компании.</Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item  eventKey="1">
+                        <Accordion.Item eventKey="1">
                             <Accordion.Header>Как узнать цену на заказ если он нестандартный?</Accordion.Header>
                             <Accordion.Body>При строительстве новых и реконструкции старых зданий большую популярность набирают окна, форма которых отличается от стандартного прямоугольника. Это позволяет изменить внешний вид фасада и интерьер комнат.Copyright © Компания Умные Окна</Accordion.Body>
                         </Accordion.Item>
@@ -30,7 +30,7 @@ const Reference = () => {
                             <Accordion.Header>Можно ли заказать оптовую партию?</Accordion.Header>
                             <Accordion.Body>На странице любого товара есть возможность заказать большую партию. Чаще всего для оптовых покупок продавцом предусмотрена скидка. Рядом с ценой за штуку вы увидите кнопку «Оптовая цена». Если вас интересует заказ большой партии, то нажимайте на эту кнопку и изучайте условия</Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item  eventKey="3">
+                        <Accordion.Item eventKey="3">
                             <Accordion.Header>Разрабатываете ли вы дизайн по идеи клиента?</Accordion.Header>
                             <Accordion.Body>Дизайн-мышление — это системный подход к решению проблем. В центре этой системы находится клиент; она фокусируется на создании решений в виде продуктов или услуг, которые в перспективе принесут ему пользу.</Accordion.Body>
                         </Accordion.Item>
@@ -43,7 +43,7 @@ const Reference = () => {
                             <Accordion.Header>Можно ли оплатить наличными в магазине?</Accordion.Header>
                             <Accordion.Body>Со следующего месяца станет проще расплатиться картой «Мир». Вырастет число магазинов, которые обязаны будут её принимать. Вступят в силу соответствующие поправки в закон о защите прав потребителей. До сих пор такая обязанность была лишь у продавцов с годовой выручкой более 30 миллионов рублей. </Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item  eventKey="1">
+                        <Accordion.Item eventKey="1">
                             <Accordion.Header>Можно ли оплатить курьеру или при получении?</Accordion.Header>
                             <Accordion.Body>Наличными Покупатель может передать деньги курьеру, доставившему товар, наличными. Наш сотрудник в этом случае выдает получателю кассовый чек, который выбивается непосредственно при нем, или принимает оплату по вашему кассовому чеку.</Accordion.Body>
                         </Accordion.Item>
@@ -51,7 +51,7 @@ const Reference = () => {
                             <Accordion.Header>Можно ли вернуть товар?</Accordion.Header>
                             <Accordion.Body>Согласно положениям Закона РФ №2300-1 от 07.02.1992 г. «О защите прав потребителей» (далее Закон) покупатель в течение 14 дней не считая дня покупки, имеет право обменять товар надлежащего качества на аналогичный товар другого размера, формы, габарита, фасона, расцветки или комплектации.</Accordion.Body>
                         </Accordion.Item>
-                        <Accordion.Item  eventKey="3">
+                        <Accordion.Item eventKey="3">
                             <Accordion.Header>Какие способы доставки у вас есть?</Accordion.Header>
                             <Accordion.Body>Курьерская доставка стала уже необходимостью для больших городов, где жители привыкли к определённому уровню сервиса и ценят возможность получить товар в кратчайшие сроки. Поэтому, если вы работаете с аудиторией из больших городов, курьерская доставка станет неоспоримым плюсом. Или, наоборот, вы можете сделать курьерскую доставку своим конкурентным преимуществом, если ваши покупатели живут в малых городах и привыкли получать товары, например, только по почте.</Accordion.Body>
                         </Accordion.Item>
@@ -79,8 +79,8 @@ const Reference = () => {
                     </Accordion>
                 </Row>
             </Container>
-            <Questions/>
-            </Styles>
+            <Questions />
+        </Styles>
         </>
 
     )

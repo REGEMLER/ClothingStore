@@ -1,20 +1,20 @@
 import React from "react";
-import {Slider} from "../Components/Slider";
-import {ShopWindow} from "../Components/ShopWindow";
-import {Popular} from "../Components/Popular"; 
-import {Examples} from "../Components/Examples"; 
-import {Questions} from "../Components/Questions"; 
+import { Slider } from "../Components/Slider";
+import { ShopWindow } from "../Components/ShopWindow";
+import { Popular } from "../Components/Popular";
+import { Examples } from "../Components/Examples";
+import { Questions } from "../Components/Questions";
 
 
 const Home = () => {
 
-    return(
+    return (
         <>
-            <Slider/>
-            <ShopWindow/>    
-            <Popular/>
-            <Examples/>
-            <Questions/>
+            <Slider />
+            <ShopWindow />
+            <Popular />
+            <Examples />
+            <Questions />
         </>
     )
 }

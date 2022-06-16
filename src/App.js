@@ -19,32 +19,32 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import PathError from "./Pages/PathError";
 import Comments from "./Pages/Comments";
-import Navibar from './Components/Navibar';
+import Header from './Components/Header';
 import Footer from './Components/Footer';
 
 function App() {
   return (<>
-  <Provider store={store}>
+    <Provider store={store}>
       <Router>
-    <Navibar/>
-    <Routes>
-      <Route exact path="/" element={<Home/>}/>
-      <Route path="/ClothingStore" element={<Home/>}/>
-      <Route path="/catalog" element={<Catalog/>}/>
-      <Route path="/delivery" element={<Delivery/>}/>
-      <Route path="/payment" element={<Payment/>}/>
-      <Route path="/servis" element={<Servis/>}/>
-      <Route path="/reference" element={<Reference/>}/>
-      <Route path="/comments" element={<Comments/>}/>
-      <Route path="/cart" element={<Cart/>}/>
-      <Route path="/product" element={<ProductPage/>}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
-      <Route path="*" element={<PathError/>}/>
-    </Routes>
-    <Footer/>
-    </Router>
-  </Provider>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/ClothingStore" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/payment" element={<Payment />} />
+          <Route path="/servis" element={<Servis />} />
+          <Route path="/reference" element={<Reference />} />
+          <Route path="/comments" element={<Comments />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<PathError />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   </>
   );
 }

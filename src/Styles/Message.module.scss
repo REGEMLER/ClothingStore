@@ -1,25 +1,29 @@
 @import "variables.module.scss";
 
-.message{
+.message {
     width: 100%;
     margin: 0 auto;
     padding: 50px;
     background-color: $mainColor;
     text-align: center;
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         padding: 5px;
     }
-    .messageContainer{
+
+    .messageContainer {
         max-width: 1000px;
         margin: 0 auto;
         text-align: center;
         padding: 40px 80px;
         overflow: hidden;
-        @media screen and (max-width: 768px){
+
+        @media screen and (max-width: 768px) {
             padding: 10px 30px;
         }
     }
-    .messageTitle{
+
+    .messageTitle {
         width: 100%;
         margin: 0 auto;
         font-family: $mainFont;
@@ -27,18 +31,21 @@
         font-weight: 500;
         font-size: $titleSize;
         margin-bottom: 20px;
-        @media screen and (max-width: 768px){
+
+        @media screen and (max-width: 768px) {
             font-size: $titleSizeMedia;
         }
     }
-    .messageText{
+
+    .messageText {
         font-family: $mainFont;
         font-style: normal;
         font-weight: 400;
         font-size: $textSize;
         text-align: center;
     }
-    .messageBtn{
+
+    .messageBtn {
         width: 380px;
         height: 80px;
         background: #FFFFFF;
@@ -49,13 +56,15 @@
         font-weight: 300;
         font-size: $btnSize;
         transition: all linear .4s;
-         &:hover{
-           transform: scale(1.1);
-       }
-       @media screen and (max-width: 768px){
-        width: 300px;
-        height: 60px;
-        font-size: $textSize;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 300px;
+            height: 60px;
+            font-size: $textSize;
         }
     }
 }
