@@ -19,7 +19,6 @@ const Styles = styled.div`
     } 
 `
 
-
 const Servis = () => {
     return (
         <>

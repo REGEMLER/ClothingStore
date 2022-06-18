@@ -45,7 +45,7 @@ const Footer = () => {
                     <Col><Link to="/delivery">Доставка</Link></Col>
                     <Col><Link to="/delivery">Доставка</Link></Col>
                     <Col><Link to="/payment">Оплата</Link></Col>
-                    <Col><p>Yamada Todoso</p></Col>
+                    <Col><p>Made in 2022</p></Col>
                 </Row>
                 <Row>
                     <Col><Link to="/servis">Услуги</Link></Col>
