@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useAuth } from "../hooks/useAuth";
 import { clearCart } from "../redux/cart/reducer";
 import Card from "../Components/Card";
 import { Link, useNavigate } from "react-router-dom";
 import { Questions } from '../Components/Questions';
 import { Container, Col, Row, Modal, Button } from "react-bootstrap";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from '../firebase';
 import cls from "../Styles/Cart.module.scss"
 
 const Cart = () => {
+    const { email, id } = useAuth();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -18,6 +22,11 @@ const Cart = () => {
     const navigate = useNavigate();
 
     const checkout = () => {
+        const docRef = addDoc(collection(db, "orders"), {
+            orders: items,
+            email,
+            uid: id
+        });
         dispatch(clearCart());
         handleShow();
     }

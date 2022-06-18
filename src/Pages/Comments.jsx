@@ -1,5 +1,4 @@
-import React, { useEffect, useCallback, useContext } from "react";
-import { Context } from "../index";
+import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useAuth } from "../hooks/useAuth";
 import { fetchComments } from "../redux/comments/ActionCreator";
@@ -8,27 +7,29 @@ import Subtitle from "../Components/Subtitle";
 import Comment from "../Components/Comment";
 import Message from "../Components/Message";
 import Loader from "../Components/Loader";
-import { useCollectionData } from "react-firebase-hooks/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { db } from '../firebase';
 
 const Comments = () => {
 
-    //Попытка создать файрсторе
-    // const {firestore} = useContext(Context);
-    // const [messages, loading] = useCollectionData(
-    //     firestore.collection('messages')
-    // )
+
     // const sendMessage = async (userInput) => {
-    //     firestore.collection('messages').add({
+    //     const docRef = await addDoc(collection(db, "messages"), {
     //         id: new Date(),
-    //         uid:id,
+    //         uid: id,
     //         name: login,
     //         body: userInput,
     //         email,
-    //     })
+    //     });
+    //     const querySnapshot = await getDocs(collection(db, "messages"));
+    //      querySnapshot.forEach((doc) => {
+    //       console.log(doc.data());
+    //     });
     // }
     // const addComment = useCallback(sendMessage);
-
+    
     const { email, id, login } = useAuth();
+    
     const dispatch = useDispatch();
 
     const comments = useSelector((state) => state.comments.comments);
@@ -38,7 +39,8 @@ const Comments = () => {
 
 
     const userComment = (userInput) => {
-        const comment = { id: new Date(), name: login, body: userInput, email };
+        const comment = { id: new Date(), name: login, body: userInput, email, uid: id, };
+        const docRef = addDoc(collection(db, "messages"), comment);
         return comment;
     }
     const newComment = (userInput) => {
@@ -79,7 +81,7 @@ const Comments = () => {
                         mail={userComment.email} />
                 )
             })}
-            {/* {messages.map(userComment => {
+            {/* {mess.map(userComment => {
                 return(
                     <Comment
                     uid={userComment.uid}

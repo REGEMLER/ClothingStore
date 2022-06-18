@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// import { MapOfShop } from "./MapOfShop";
 import map from "../IMG/map.png";
 import cls from "../Styles/Requisites.module.scss";
 
@@ -23,9 +22,6 @@ export const Requisites = () => {
                         <img className={cls.img} src={map} />
                     </Col>
                 </Row>
-                {/* <Row>
-                <MapOfShop/>
-            </Row> */}
             </Container>
         </>
     )

@@ -3,12 +3,16 @@ import cartReducer from "./cart/reducer";
 import cardReducer from "./card/reducer";
 import commentsReducer from "./comments/reducer";
 import userReducer from "./user/reducer";
+//delete
+import commentReducer from "./comment/reducer"
 
 export const store = configureStore({
     reducer: {
         cart: cartReducer,
         cards: cardReducer,
         comments:commentsReducer,
-        user: userReducer
+        user: userReducer,
+        //Delete
+        comment: commentReducer
     }
 })
