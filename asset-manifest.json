@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/ClothingStore/static/css/main.9d8cfc82.css",
-    "main.js": "/ClothingStore/static/js/main.75117c23.js",
+    "main.css": "/ClothingStore/static/css/main.bb5dc1b6.css",
+    "main.js": "/ClothingStore/static/js/main.a117b0f3.js",
     "static/media/Slide1.jpg": "/ClothingStore/static/media/Slide1.bdff38434b7deb29b651.jpg",
     "static/media/Slide3.jpg": "/ClothingStore/static/media/Slide3.0d9a714fa1b0f64a70cc.jpg",
     "static/media/Slide2.jpg": "/ClothingStore/static/media/Slide2.b01a16f0d6f2fd0c2f63.jpg",
     "static/media/Example3.png": "/ClothingStore/static/media/Example3.80de48166f8958fe88f5.png",
     "static/media/Example2.png": "/ClothingStore/static/media/Example2.23ccc12b9a356d58dd13.png",
-    "static/media/map.png": "/ClothingStore/static/media/map.26beff15ecd3cd429e7e.png",
     "static/media/Example1.png": "/ClothingStore/static/media/Example1.9435c045354563a6fff7.png",
     "static/media/фиолетовая.jpg": "/ClothingStore/static/media/фиолетовая.151abf4fdb2849b28a4a.jpg",
     "static/media/equip.png": "/ClothingStore/static/media/equip.27d179e52736b17b3d45.png",
@@ -49,11 +48,11 @@
     "static/media/slick.ttf": "/ClothingStore/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ClothingStore/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ClothingStore/index.html",
-    "main.9d8cfc82.css.map": "/ClothingStore/static/css/main.9d8cfc82.css.map",
-    "main.75117c23.js.map": "/ClothingStore/static/js/main.75117c23.js.map"
+    "main.bb5dc1b6.css.map": "/ClothingStore/static/css/main.bb5dc1b6.css.map",
+    "main.a117b0f3.js.map": "/ClothingStore/static/js/main.a117b0f3.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d8cfc82.css",
-    "static/js/main.75117c23.js"
+    "static/css/main.bb5dc1b6.css",
+    "static/js/main.a117b0f3.js"
   ]
 }
