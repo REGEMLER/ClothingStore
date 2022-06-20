@@ -39,33 +39,6 @@ export const Questions = () => {
     setSucces(true);
   }
 
-  const [tel, setTel] = useState(``);
-  const [formTel, setFormTel] = useState(false);
-  const telClose = () => setFormTel(false);
-  const telShow = () => setFormTel(true);
-  const telKeyPress = (e) => {
-    if (e.key === "Enter") {
-      makeTel(e)
-    }
-  }
-  const telChange = (e) => {
-    setTel(e.currentTarget.value);
-  }
-  const telClick = (e) => {
-    makeTel(e)
-  }
-  const makeTel = (e) => {
-    e.preventDefault();
-    const docRef = addDoc(collection(db, "phones"), {
-      phone: tel,
-      email,
-      uid: id
-    });
-    telClose();
-    setTel('')
-    setSucces(true);
-  }
-
   const [succes, setSucces] = useState(false);
   const succesClose = () => setSucces(false);
 
@@ -76,7 +49,7 @@ export const Questions = () => {
         <p className={cls.text}>Заполните форму и менеджер свяжется с вами в ближайшее время.</p>
         <div className={cls.btns}>
           <button className={cls.btn} onClick={isAuth ? questionShow : () => navigate("/login")}>Задать вопрос</button>
-          <button className={cls.btn} onClick={isAuth ? telShow : () => navigate("/login")}>Позвонить</button>
+          <button className={cls.btn}><a href="tel:+375292384886">Позвонить</a></button>
         </div>
       </div>
       <Modal show={formQuestion} onHide={questionClose}>
@@ -94,21 +67,6 @@ export const Questions = () => {
         <Modal.Footer>
           <Button variant="secondary" onClick={questionClose}>Закрыть</Button>
           <Button variant="primary" onClick={questionClick}>Отправить</Button>
-        </Modal.Footer>
-      </Modal>
-      <Modal show={formTel} onHide={telClose}>
-        <Modal.Header closeButton><Modal.Title>Позвонить</Modal.Title></Modal.Header>
-        <Modal.Body>
-          <Form onSubmit={makeTel}>
-            <Form.Group controlId="fromBasikTel">
-              <Form.Label>Напишите Ваш номер и наш менеджер свяжется с Вами</Form.Label>
-              <Form.Control onChange={telChange} onKeyDown={telKeyPress} value={tel} type="tel" placeholder="Введите Ваш номер телефона"></Form.Control>
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={telClose}>Отмена</Button>
-          <Button variant="primary" onClick={telClick}>Отправить</Button>
         </Modal.Footer>
       </Modal>
       <Modal show={succes} onHide={succesClose}>

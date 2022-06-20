@@ -54,6 +54,9 @@
             font-weight: 300;
             font-size: $btnSize;
             transition: all linear .4s;
+            a{
+                color:black
+            }
 
             &:hover {
                 transform: scale(1.1);
