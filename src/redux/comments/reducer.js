@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchComments } from "./ActionCreator";
+import { fetchComments } from "./actionCreator";
 
 const commentsSlice = createSlice({
     name: "comments",

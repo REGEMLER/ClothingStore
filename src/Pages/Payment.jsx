@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Subtitle from "../Components/Subtitle";
 import { Questions } from "../Components/Questions";
-import { Col, Container, Row, Modal, Form, Button } from "react-bootstrap";
+import { Col, Container, Row, Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import cls from "../Styles/Payment.module.scss";
 import visa from "../IMG/Visa.webp";

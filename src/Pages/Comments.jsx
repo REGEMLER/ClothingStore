@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useAuth } from "../hooks/useAuth";
 import { useComment } from "../hooks/useComment";
-import { fetchComments } from "../redux/comments/ActionCreator";
+import { fetchComments } from "../redux/comments/actionCreator";
 import { setComment } from "../redux/comments/reducer";
 import Subtitle from "../Components/Subtitle";
 import Comment from "../Components/Comment";
